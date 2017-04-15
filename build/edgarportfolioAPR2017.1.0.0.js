@@ -54,7 +54,7 @@
 	
 	// Smooth scrolling code
 	var page = 0;
-	var marginY = 0;
+	var marginY = window.scrollY;
 	var marginy = marginY;
 	var increment = 7;
 	var decrement = 7;
@@ -92,6 +92,15 @@
 	
 		// sticky fixed nav on scroll.
 		var navOffset = (0, _jquery2.default)('.nav').offset().top;
+	
+		var scrollPos = (0, _jquery2.default)(window).scrollTop();
+	
+		// Fixes scroll bar when page is refreshed
+		if (scrollPos >= navOffset) {
+			(0, _jquery2.default)('.nav').addClass('fixed');
+		} else {
+			(0, _jquery2.default)('.nav').removeClass('fixed'); // removes fixed class when moving back into splash page
+		}
 	
 		(0, _jquery2.default)(window).scroll(function () {
 			var scrollPos = (0, _jquery2.default)(window).scrollTop();

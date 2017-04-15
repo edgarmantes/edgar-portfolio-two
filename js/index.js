@@ -6,7 +6,7 @@ import $ from "jquery";
 
 // Smooth scrolling code
 let page = 0;
-let marginY = 0;
+let marginY = window.scrollY;
 let marginy = marginY;
 let increment = 7;
 let decrement = 7;
@@ -15,7 +15,7 @@ let currentPage = 0;
 
 let initScroll = (pageId) => {
 	page = document.getElementById(pageId).offsetTop;
-	
+
 	scroller = setTimeout(() => {
 		initScroll(pageId);
 	}, 1);
@@ -44,6 +44,15 @@ $(document).ready( () => {
 
 	// sticky fixed nav on scroll.
 	let navOffset = $('.nav').offset().top;
+
+	let scrollPos = $(window).scrollTop();
+
+	// Fixes scroll bar when page is refreshed
+	if (scrollPos >= navOffset){
+		$('.nav').addClass('fixed');
+	} else {
+		$('.nav').removeClass('fixed'); // removes fixed class when moving back into splash page
+	}
 	
 	$(window).scroll(function(){
 		let scrollPos = $(window).scrollTop();

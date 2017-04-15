@@ -4,6 +4,9 @@ uses variable to common properties
 .wrapper {
   height: 92vh;
 }
+.wrappers {
+  height: 101vh;
+}
 .test-img {
   background-color: white;
 }
@@ -73,6 +76,10 @@ about me
 /***************************
 projects
 ****************************/
+.project {
+  border: 1px solid black;
+  height: 25%;
+}
 /***************************
 contacts
 ****************************/
