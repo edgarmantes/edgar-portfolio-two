@@ -71,7 +71,7 @@
 		if (page - marginY > 0) {
 			// If conditions are met page will scroll down
 			marginY = marginY + increment;
-			if (marginY >= page) {
+			if (marginY + 50 >= page) {
 				clearTimeout(scroller);
 			};
 		} else {
