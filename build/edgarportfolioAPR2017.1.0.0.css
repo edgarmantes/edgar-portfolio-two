@@ -45,7 +45,7 @@ projects
 ****************************/
 .projects {
   background-color: lightgray;
-  /*	background-image: url(../images/connect.png);*/
+  background-image: url(../images/beach3.png);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@ projects
   font-style: italic;
 }
 .project-desc p > span > strong {
-  color: lightblue;
+  color: #50a96e;
 }
 /***************************
 contacts
