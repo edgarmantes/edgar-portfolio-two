@@ -10,7 +10,7 @@ splash page
 nav
 ****************************/
 .nav ul > li {
-	color: rgba(0,0,0,0.5);
+	color: rgba(0,0,0,0.7);
 }
 
 /***************************
@@ -20,6 +20,7 @@ about me
 .about-cont {
 	line-height: 1.8;
 	text-align: center;
+
 }
 
 .about-quote {
@@ -63,4 +64,100 @@ contacts
 	color: rgb(60,155,64);
 }
 
-/*60,155,64*/
+
+
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+
+	/***************************
+	splash page
+	****************************/
+
+
+	/***************************
+	nav
+	****************************/
+	.nav {
+
+		ul > li {
+			font-size: 25px;
+		}
+	}
+
+	/***************************
+	about me
+	****************************/
+	.about-cont {
+
+		.desc {
+			font-size: 24px;
+		}
+	}
+
+
+	/***************************
+	projects
+	****************************/
+	.projects {
+
+		.project-hdr {
+			font-size: 4em;
+		}
+	}
+
+	.project-desc {
+		font-size: 19px;
+    	line-height: 1.4;
+	}
+
+	/***************************
+	contacts
+	****************************/
+	.contacts-hdr {
+		font-size: 4em;
+	}
+
+	.contact-sect {
+
+		ul > a > li {
+		    font-size: 24px;
+		}
+	}
+}
+
+
+
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+
+	/***************************
+	splash page
+	****************************/
+
+
+	/***************************
+	nav
+	****************************/
+
+
+	/***************************
+	about me
+	****************************/
+	.about-cont {
+		text-align: left;
+		.desc {
+			line-height: 1.5;
+		}
+	}
+
+
+	/***************************
+	projects
+	****************************/
+
+
+	/***************************
+	contacts
+	****************************/
+
+}

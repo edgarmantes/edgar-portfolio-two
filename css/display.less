@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	margin:0;
+	padding:0;
 }
 
 ul {
@@ -16,10 +18,14 @@ a {
 	text-decoration: none;
 }
 
+.hidden {
+	display: none;
+}
 
 /*Needed for fixed image scroll*/
 body, html, main {
 	height: 100%;
+	/*width: 100vw;*/
 }
 
 .wrapper {
@@ -66,7 +72,7 @@ splash page
 }
 
 .splash-img > img {
-	width: 101%;
+	width: 102%;
 	margin: 0 -1px;
 }
 
@@ -88,8 +94,8 @@ nav
 		display: inline-block;
 		list-style: none;
 		font-size: 14px;
-		padding: 0 10px;
-	    border-right: 1px solid lightgray;
+		padding: 0 8px;
+	    border-right: 1px solid gray;
 	}
 
 	ul > li > img {
@@ -106,15 +112,15 @@ nav
 
 .nav > ul {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
     margin: 0;
 }
 
 /***************************
 about me
 ****************************/
-.about {
-	
+.about-hdr {
+	display: none;
 }
 
 .about-cont {
@@ -141,19 +147,25 @@ projects
 
 .project {
 	height: 25%;
-	width: 100%;
-	padding: 2.5% 5%;
+    width: 90%;
+    margin: 20px auto;
 }
 
 .project-cont {
 	height: 235px;
 	text-align: center;
+
+	.img {
+		display: inline-block;
+    	width: 38%;
+    	height: 100%;
+	}
 }
 
 .project-img {
 	display: inline-block;
-	width: 38%;
-	padding-top: 38px;
+    max-width: 97px;
+    padding-top: 38px;
 }
 
 .project-desc {
@@ -163,7 +175,7 @@ projects
 	position: relative;
     vertical-align: top;
 	p {
-		padding: 0 1em;
+		padding: 1em;
 	}
 
 	p > span {
@@ -184,7 +196,7 @@ projects
 	}
 	img {
 		padding: 8px 10.5%;
-
+		max-width: 32%;
 	}
 
 }
@@ -196,7 +208,7 @@ projects
 contacts
 ****************************/
 .contacts-hdr {
-	margin: 0;
+	margin-bottom: 25px;
 }
 
 .contacts-cont {
@@ -225,3 +237,213 @@ contacts
 	}
 }
 
+
+
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+
+	/***************************
+	splash page
+	****************************/
+	.splash {
+		max-width: 710px;
+	}
+
+	.splash-img > img {
+		margin: -2px -3px;
+	}
+
+	.splash-top {
+		height:17vh;
+	}
+
+	/***************************
+	nav
+	****************************/
+	.nav {
+
+		ul {
+			padding: 2rem;
+		}
+
+		ul > li {
+    		padding: 0 25px;
+    		height: 20px;
+		}
+	}
+
+	/***************************
+	about me
+	****************************/
+
+	.about-cont > img {
+		padding-top: 60px;
+	}
+
+
+	/***************************
+	projects
+	****************************/
+
+	.projects {
+
+		.project-hdr {
+    		margin: 1em 0;
+		}
+	}
+
+	.project {
+		max-width: 650px;
+	}
+
+	.project-img {
+		width: 124px;
+		max-width: unset;
+	}
+
+	.project-cont {
+
+		.img {
+			width: 39%;
+			margin-right: 2px;
+		}
+	}
+
+	/***************************
+	contacts
+	****************************/
+
+	.contacts {
+
+	}
+
+	.contacts-hdr {
+		margin: 1em 0;
+	}
+
+	.contact-sect {
+
+		height: 435px;
+
+		ul > a > li {
+			padding-left: 160px;
+		}
+	}
+
+}
+
+
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+
+	/***************************
+	splash page
+	****************************/
+
+
+	/***************************
+	nav
+	****************************/
+	.nav {
+
+		ul > li {
+			padding: 0 60px;
+
+			img {
+				height: 25px;
+			}
+		}
+	}
+
+	/***************************
+	about me
+	****************************/
+	.about-hdr {
+		display: block;
+		text-align: center;
+	}
+
+	.about-cont {
+		width: 95%;
+		margin-top: 10vh;
+		> img {
+			display: none;
+		}
+
+		.desc {
+			display: inline-block;
+			width: 40%;
+		}
+	}
+
+	.about-par {
+		margin-bottom: 25px;
+		line-height: 2;
+	}
+
+	.animation {
+		width: 50%;
+    	text-align: right;
+	}
+
+	.edgar-anima {
+		display: inline-block;
+		width: 59%;
+		height: 800px;
+    	vertical-align: top;
+	}
+
+
+
+
+
+	/***************************
+	projects
+	****************************/
+	.projects {
+		text-align: center;
+		height: 101vh;
+
+		.project-hdr {
+			margin: 1.5em 0;
+		}
+	}
+
+	.project {
+		
+		display: inline-block;
+		margin: 30px;
+		vertical-align: top;
+	}
+
+
+	/***************************
+	contacts
+	****************************/
+	.contact-sect {
+		width: 49%;
+    	display: inline-block;
+
+
+		ul > a > li {
+		    padding: 30px;
+		    padding-left: 258px;
+		    border: none;
+
+		    img {
+		    	width: 35px;
+		    	margin-right: 28px;
+		    }
+		}
+
+		ul > a:nth-child(3) > li {
+		    border-bottom: none;
+		}
+	}
+
+	.contacts-cont {
+	    padding-top: 20vh;
+	    text-align: center;
+	}
+
+}

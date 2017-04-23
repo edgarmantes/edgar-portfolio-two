@@ -63,6 +63,393 @@ contacts
 .contacts {
   background-color: white;
 }
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+  /***************************
+splash page
+****************************/
+  /***************************
+nav
+****************************/
+  /***************************
+about me
+****************************/
+  /***************************
+projects
+****************************/
+  /***************************
+contacts
+****************************/
+}
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  /***************************
+	about me
+	****************************/
+  .about {
+    background-color: #d9d9d9;
+  }
+  .edgar-anima {
+    background-image: url(../images/edgar.png);
+    background-size: 50%;
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  /***************************
+	projects
+	****************************/
+  /***************************
+	contacts
+	****************************/
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.hidden {
+  display: none;
+}
+/*Needed for fixed image scroll*/
+body,
+html,
+main {
+  height: 100%;
+  /*width: 100vw;*/
+}
+.wrapper {
+  height: 92vh;
+}
+.wrappers {
+  height: 101vh;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+}
+/*used for visually hiding but semantically avaiable for screenreaders*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/***************************
+splash page
+****************************/
+.splash-img {
+  width: 100%;
+  /*height: 100vh;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+.splash {
+  width: 80%;
+  margin-bottom: -1px;
+}
+.splash-img > img {
+  width: 102%;
+  margin: 0 -1px;
+}
+.splash-top,
+.splash-bottom {
+  height: 24vh;
+  border: none;
+  width: 101%;
+  margin: -5px -2px;
+}
+/***************************
+nav
+****************************/
+.nav {
+  width: 100%;
+  height: 8vh;
+  z-index: 10;
+}
+.nav ul > li {
+  display: inline-block;
+  list-style: none;
+  font-size: 14px;
+  padding: 0 8px;
+  border-right: 1px solid gray;
+}
+.nav ul > li > img {
+  height: 13px;
+}
+.nav-wrap {
+  width: 100%;
+  height: 8vh;
+}
+.nav > ul {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+}
+/***************************
+about me
+****************************/
+.about-hdr {
+  display: none;
+}
+.about-cont {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-cont > img {
+  width: 35%;
+  border-radius: 50%;
+  padding-top: 10px;
+}
+/***************************
+projects
+****************************/
+.projects {
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+.project {
+  height: 25%;
+  width: 90%;
+  margin: 20px auto;
+}
+.project-cont {
+  height: 235px;
+  text-align: center;
+}
+.project-cont .img {
+  display: inline-block;
+  width: 38%;
+  height: 100%;
+}
+.project-img {
+  display: inline-block;
+  max-width: 97px;
+  padding-top: 38px;
+}
+.project-desc {
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+  position: relative;
+  vertical-align: top;
+}
+.project-desc p {
+  padding: 1em;
+}
+.project-desc p > span {
+  display: block;
+  margin-top: 6px;
+  word-wrap: break-word;
+  font-style: italic;
+}
+.project-btn {
+  border-top: 1px solid white;
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+}
+.project-btn a:nth-child(-n+2) > img {
+  border-right: 1px solid white;
+}
+.project-btn img {
+  padding: 8px 10.5%;
+  max-width: 32%;
+}
+/*scrummage*/
+/***************************
+contacts
+****************************/
+.contacts-hdr {
+  margin-bottom: 25px;
+}
+.contacts-cont {
+  padding-top: 30px;
+  text-align: center;
+}
+.contact-sect {
+  height: 320px;
+  padding: 30px 0;
+}
+.contact-sect ul > a > li {
+  padding: 23px;
+  border-top: 1px solid lightgray;
+  text-align: initial;
+  padding-left: 80px;
+}
+.contact-sect ul > a:nth-child(3) > li {
+  border-bottom: 1px solid lightgray;
+}
+.contact-sect ul > a > li > img {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+  /***************************
+	splash page
+	****************************/
+  .splash {
+    max-width: 710px;
+  }
+  .splash-img > img {
+    margin: -2px -3px;
+  }
+  .splash-top {
+    height: 17vh;
+  }
+  /***************************
+	nav
+	****************************/
+  .nav ul {
+    padding: 2rem;
+  }
+  .nav ul > li {
+    padding: 0 25px;
+    height: 20px;
+  }
+  /***************************
+	about me
+	****************************/
+  .about-cont > img {
+    padding-top: 60px;
+  }
+  /***************************
+	projects
+	****************************/
+  .projects .project-hdr {
+    margin: 1em 0;
+  }
+  .project {
+    max-width: 650px;
+  }
+  .project-img {
+    width: 124px;
+    max-width: unset;
+  }
+  .project-cont .img {
+    width: 39%;
+    margin-right: 2px;
+  }
+  /***************************
+	contacts
+	****************************/
+  .contacts-hdr {
+    margin: 1em 0;
+  }
+  .contact-sect {
+    height: 435px;
+  }
+  .contact-sect ul > a > li {
+    padding-left: 160px;
+  }
+}
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  .nav ul > li {
+    padding: 0 60px;
+  }
+  .nav ul > li img {
+    height: 25px;
+  }
+  /***************************
+	about me
+	****************************/
+  .about-hdr {
+    display: block;
+    text-align: center;
+  }
+  .about-cont {
+    width: 95%;
+    margin-top: 10vh;
+  }
+  .about-cont > img {
+    display: none;
+  }
+  .about-cont .desc {
+    display: inline-block;
+    width: 40%;
+  }
+  .about-par {
+    margin-bottom: 25px;
+    line-height: 2;
+  }
+  .animation {
+    width: 50%;
+    text-align: right;
+  }
+  .edgar-anima {
+    display: inline-block;
+    width: 59%;
+    height: 800px;
+    vertical-align: top;
+  }
+  /***************************
+	projects
+	****************************/
+  .projects {
+    text-align: center;
+    height: 101vh;
+  }
+  .projects .project-hdr {
+    margin: 1.5em 0;
+  }
+  .project {
+    display: inline-block;
+    margin: 30px;
+    vertical-align: top;
+  }
+  /***************************
+	contacts
+	****************************/
+  .contact-sect {
+    width: 49%;
+    display: inline-block;
+  }
+  .contact-sect ul > a > li {
+    padding: 30px;
+    padding-left: 258px;
+    border: none;
+  }
+  .contact-sect ul > a > li img {
+    width: 35px;
+    margin-right: 28px;
+  }
+  .contact-sect ul > a:nth-child(3) > li {
+    border-bottom: none;
+  }
+  .contacts-cont {
+    padding-top: 20vh;
+    text-align: center;
+  }
+}
 /***************************
 splash page
 ****************************/
@@ -70,7 +457,7 @@ splash page
 nav
 ****************************/
 .nav ul > li {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
 }
 /***************************
 about me
@@ -110,204 +497,87 @@ contacts
 .contact-sect ul > a > li {
   color: #3c9b40;
 }
-/*60,155,64*/
-* {
-  box-sizing: border-box;
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  .nav ul > li {
+    font-size: 25px;
+  }
+  /***************************
+	about me
+	****************************/
+  .about-cont .desc {
+    font-size: 24px;
+  }
+  /***************************
+	projects
+	****************************/
+  .projects .project-hdr {
+    font-size: 4em;
+  }
+  .project-desc {
+    font-size: 19px;
+    line-height: 1.4;
+  }
+  /***************************
+	contacts
+	****************************/
+  .contacts-hdr {
+    font-size: 4em;
+  }
+  .contact-sect ul > a > li {
+    font-size: 24px;
+  }
 }
-ul {
-  padding: 0;
-}
-li {
-  list-style: none;
-}
-a {
-  color: black;
-  text-decoration: none;
-}
-/*Needed for fixed image scroll*/
-body,
-html,
-main {
-  height: 100%;
-}
-.wrapper {
-  height: 92vh;
-}
-.wrappers {
-  height: 101vh;
-}
-.fixed {
-  position: fixed;
-  top: 0;
-}
-/*used for visually hiding but semantically avaiable for screenreaders*/
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-/***************************
-splash page
-****************************/
-.splash-img {
-  width: 100%;
-  /*height: 100vh;*/
-  margin-left: auto;
-  margin-right: auto;
-}
-.splash {
-  width: 80%;
-  margin-bottom: -1px;
-}
-.splash-img > img {
-  width: 101%;
-  margin: 0 -1px;
-}
-.splash-top,
-.splash-bottom {
-  height: 24vh;
-  border: none;
-  width: 101%;
-  margin: -5px -2px;
-}
-/***************************
-nav
-****************************/
-.nav {
-  width: 100%;
-  height: 8vh;
-  z-index: 10;
-}
-.nav ul > li {
-  display: inline-block;
-  list-style: none;
-  font-size: 14px;
-  padding: 0 10px;
-  border-right: 1px solid lightgray;
-}
-.nav ul > li > img {
-  height: 13px;
-}
-.nav-wrap {
-  width: 100%;
-  height: 8vh;
-}
-.nav > ul {
-  text-align: center;
-  padding: 1rem;
-  margin: 0;
-}
-/***************************
-about me
-****************************/
-.about-cont {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.about-cont > img {
-  width: 35%;
-  border-radius: 50%;
-  padding-top: 10px;
-}
-/***************************
-projects
-****************************/
-.projects {
-  padding-top: 30px;
-  padding-bottom: 100px;
-}
-.project {
-  height: 25%;
-  width: 100%;
-  padding: 2.5% 5%;
-}
-.project-cont {
-  height: 235px;
-  text-align: center;
-}
-.project-img {
-  display: inline-block;
-  width: 38%;
-  padding-top: 38px;
-}
-.project-desc {
-  display: inline-block;
-  width: 60%;
-  height: 100%;
-  position: relative;
-  vertical-align: top;
-}
-.project-desc p {
-  padding: 0 1em;
-}
-.project-desc p > span {
-  display: block;
-  margin-top: 6px;
-  word-wrap: break-word;
-  font-style: italic;
-}
-.project-btn {
-  border-top: 1px solid white;
-  position: absolute;
-  bottom: -5px;
-  width: 100%;
-}
-.project-btn a:nth-child(-n+2) > img {
-  border-right: 1px solid white;
-}
-.project-btn img {
-  padding: 8px 10.5%;
-}
-/*scrummage*/
-/***************************
-contacts
-****************************/
-.contacts-hdr {
-  margin: 0;
-}
-.contacts-cont {
-  padding-top: 30px;
-  text-align: center;
-}
-.contact-sect {
-  height: 320px;
-  padding: 30px 0;
-}
-.contact-sect ul > a > li {
-  padding: 23px;
-  border-top: 1px solid lightgray;
-  text-align: initial;
-  padding-left: 80px;
-}
-.contact-sect ul > a:nth-child(3) > li {
-  border-bottom: 1px solid lightgray;
-}
-.contact-sect ul > a > li > img {
-  vertical-align: middle;
-  margin-right: 15px;
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  /***************************
+	about me
+	****************************/
+  .about-cont {
+    text-align: left;
+  }
+  .about-cont .desc {
+    line-height: 1.5;
+  }
+  /***************************
+	projects
+	****************************/
+  /***************************
+	contacts
+	****************************/
 }
 /****************************
 Variables and Imports
 ****************************/
-/***************************
-splash page
-****************************/
-/***************************
-nav
-****************************/
-/***************************
-about me
-****************************/
-/***************************
-projects
-****************************/
-/***************************
-contacts
-****************************/
+/*template*/
+/****iPad View*****/
+@media only screen and (min-width: 640px /) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  /***************************
+	about me
+	****************************/
+  /***************************
+	projects
+	****************************/
+  /***************************
+	contacts
+	****************************/
+}
 /*# sourceMappingURL=edgarportfolioAPR2017.1.0.0.css.map */
