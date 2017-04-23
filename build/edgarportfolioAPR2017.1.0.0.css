@@ -26,6 +26,7 @@ splash page
 }
 .white {
   background-color: white;
+  z-index: 2;
   animation: fadeInBack 2s;
 }
 @keyframes fadeInBack {
@@ -36,6 +37,16 @@ splash page
   100% {
     opacity: 0;
     z-index: -1;
+  }
+}
+@keyframes fadeOutBack {
+  0% {
+    opacity: 0;
+    /*z-index: -1;*/
+  }
+  100% {
+    opacity: 1;
+    z-index: 2;
   }
 }
 /***************************
@@ -168,6 +179,35 @@ main {
   position: absolute;
   width: 1px;
 }
+/*animation code*/
+@keyframes LR {
+  0% {
+    transform: translate(100px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes RL {
+  0% {
+    transform: translate(-100px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /***************************
 splash page
 ****************************/
@@ -204,14 +244,6 @@ splash page
   height: 92vh;
   left: 0;
   z-index: -1;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 /***************************
 nav
@@ -469,19 +501,19 @@ contacts
     text-align: right;
   }
   .animation .basketball {
-    /*opacity: 0;*/
-    animation: LR 2s;
+    opacity: 0;
+    /*animation: LR 2s;*/
     text-align: left;
   }
   .animation .traveling {
-    /*opacity: 0;*/
-    animation: LR 2s;
+    opacity: 0;
+    /*animation: LR 2s;*/
     animation-delay: 0.3s;
     margin-right: 10%;
   }
   .animation .art {
-    /*opacity: 0;*/
-    animation: LR 2s;
+    opacity: 0;
+    /*animation: LR 2s;*/
     animation-delay: 0.5s;
   }
   .edgar-anima {
@@ -492,19 +524,23 @@ contacts
     padding-left: 41px;
   }
   .lakers {
-    animation: RL 1.5s;
+    opacity: 0;
+    /*animation: RL 1.5s;*/
   }
   .surfing {
+    opacity: 0;
     margin-right: 126px;
-    animation: LR 1.5s;
+    /*animation: LR 1.5s;*/
   }
   .sky_diving {
+    opacity: 0;
     margin-left: 67px;
-    animation: LR 1.5s;
+    /*animation: LR 1.5s;*/
   }
   .thailand {
+    opacity: 0;
     margin-right: 15px;
-    animation: LR 1.5s;
+    /*animation: LR 1.5s;*/
   }
   .singapore {
     margin-right: 84px;
@@ -517,27 +553,6 @@ contacts
   .graphic_design {
     margin-right: 70px;
     animation: LR 1.5s;
-  }
-  /*animation code*/
-  @keyframes LR {
-    0% {
-      transform: translate(100px, 0);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(0, 0);
-      opacity: 1;
-    }
-  }
-  @keyframes RL {
-    0% {
-      transform: translate(-100px, 0);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(0, 0);
-      opacity: 1;
-    }
   }
   /***************************
 	projects

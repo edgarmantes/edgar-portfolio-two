@@ -78,10 +78,27 @@ $(document).ready( () => {
 			$('.nav').removeClass('fixed'); // removes fixed class when moving back into splash page
 		}
 
+
+
+
 		if ( (scrollPos >= 0) && (scrollPos < (about * 0.5)) ) {
+
 			console.log('splash fires')
+			$('.white').css({'animation':'fadeInBack 2s','z-index': '-1', 'opacity': '0'})
+		
 		} else if ((scrollPos > (about * 0.5)) && (scrollPos < (((projects-about) * 0.5)+about))) {
+			
 			console.log('splash disappears about fire')
+			$('.white').css({'animation':'fadeOutBack 2s','z-index': '2', 'opacity': '1'})
+			$('.basketball').css({'animation':'LR 2s','opacity':'1'});
+			$('.traveling').css({'animation':'LR 2s','opacity':'1'});
+			$('.art').css({'animation':'LR 2s','opacity':'1'});
+			$('.lakers').css({'animation':'RL 2s','opacity':'1'});
+			$('.surfing').css({'animation':'LR 2s','opacity':'1'});
+			$('.sky_diving').css({'animation':'LR 2s','opacity':'1'});
+			$('.thailand').css({'animation':'LR 2s','opacity':'1'});
+
+
 		} else if ( (scrollPos > (((projects-about) * 0.5)+about)) && (scrollPos < (((contacts-projects) * 0.5)+projects)) ) {
 			console.log('about disappears projects fire')
 		} else if ( (scrollPos > (((contacts-projects) * 0.5)+projects)) ){

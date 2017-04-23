@@ -55,6 +55,38 @@ body, html, main {
 	width: 1px; 
 }
 
+/*animation code*/
+@keyframes LR {
+	0% {
+		transform: translate(100px,0);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;	
+	}
+}
+
+@keyframes RL {
+	0% {
+		transform: translate(-100px,0);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;	
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 
 /***************************
 splash page
@@ -99,14 +131,7 @@ splash page
     z-index: -1;
 }
 
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
+
 
 /***************************
 nav
@@ -453,21 +478,21 @@ contacts
     	
 
 		.basketball {
-			/*opacity: 0;*/
-			animation: LR 2s;
+			opacity: 0;
+			/*animation: LR 2s;*/
 			text-align: left;
 		}
 
 		.traveling {
-			/*opacity: 0;*/
-			animation: LR 2s;
+			opacity: 0;
+			/*animation: LR 2s;*/
 			animation-delay: 0.3s;
 			margin-right: 10%;
 		}    	
 
 		.art {
-			/*opacity: 0;*/
-			animation: LR 2s;
+			opacity: 0;
+			/*animation: LR 2s;*/
 			animation-delay: 0.5s
 		}
 	}
@@ -481,22 +506,26 @@ contacts
 	}
 
 	.lakers {
-		animation: RL 1.5s;
+		opacity: 0;
+		/*animation: RL 1.5s;*/
 	}
 
 	.surfing {
+		opacity: 0;
 		margin-right: 126px;
-		animation: LR 1.5s;
+		/*animation: LR 1.5s;*/
 	}
 
 	.sky_diving {
+		opacity: 0;
     	margin-left: 67px;
-    	animation: LR 1.5s;
+    	/*animation: LR 1.5s;*/
 	}
 
 	.thailand {
+		opacity: 0;
 		margin-right: 15px;
-		animation: LR 1.5s;
+		/*animation: LR 1.5s;*/
 	}
 
 	.singapore {
@@ -514,30 +543,6 @@ contacts
 		animation: LR 1.5s;
 	}
 
-
-
-	/*animation code*/
-	@keyframes LR {
-		0% {
-			transform: translate(100px,0);
-			opacity: 0;
-		}
-		100% {
-			transform: translate(0, 0);
-			opacity: 1;	
-		}
-	}
-
-	@keyframes RL {
-		0% {
-			transform: translate(-100px,0);
-			opacity: 0;
-		}
-		100% {
-			transform: translate(0, 0);
-			opacity: 1;	
-		}
-	}
 
 	/***************************
 	projects

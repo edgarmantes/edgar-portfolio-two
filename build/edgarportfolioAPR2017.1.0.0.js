@@ -124,9 +124,20 @@
 			}
 	
 			if (scrollPos >= 0 && scrollPos < about * 0.5) {
+	
 				console.log('splash fires');
+				(0, _jquery2.default)('.white').css({ 'animation': 'fadeInBack 2s', 'z-index': '-1', 'opacity': '0' });
 			} else if (scrollPos > about * 0.5 && scrollPos < (projects - about) * 0.5 + about) {
+	
 				console.log('splash disappears about fire');
+				(0, _jquery2.default)('.white').css({ 'animation': 'fadeOutBack 2s', 'z-index': '2', 'opacity': '1' });
+				(0, _jquery2.default)('.basketball').css({ 'animation': 'LR 2s', 'opacity': '1' });
+				(0, _jquery2.default)('.traveling').css({ 'animation': 'LR 2s', 'opacity': '1' });
+				(0, _jquery2.default)('.art').css({ 'animation': 'LR 2s', 'opacity': '1' });
+				(0, _jquery2.default)('.lakers').css({ 'animation': 'RL 2s', 'opacity': '1' });
+				(0, _jquery2.default)('.surfing').css({ 'animation': 'LR 2s', 'opacity': '1' });
+				(0, _jquery2.default)('.sky_diving').css({ 'animation': 'LR 2s', 'opacity': '1' });
+				(0, _jquery2.default)('.thailand').css({ 'animation': 'LR 2s', 'opacity': '1' });
 			} else if (scrollPos > (projects - about) * 0.5 + about && scrollPos < (contacts - projects) * 0.5 + projects) {
 				console.log('about disappears projects fire');
 			} else if (scrollPos > (contacts - projects) * 0.5 + projects) {
