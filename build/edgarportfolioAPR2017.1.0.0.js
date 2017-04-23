@@ -61,6 +61,17 @@
 	var scroller = null;
 	var currentPage = 0;
 	
+	// animation variables
+	// splash
+	var splash = document.getElementById('splash').offsetTop;
+	// about
+	var about = document.getElementById('about').offsetTop;
+	// projects
+	var projects = document.getElementById('projects').offsetTop;
+	// contacts
+	var contacts = document.getElementById('contacts').offsetTop;
+	console.log(25, splash, about, projects, contacts);
+	
 	var initScroll = function initScroll(pageId) {
 		page = document.getElementById(pageId).offsetTop;
 	
@@ -102,13 +113,24 @@
 			(0, _jquery2.default)('.nav').removeClass('fixed'); // removes fixed class when moving back into splash page
 		}
 	
+		// Scrolling listener
 		(0, _jquery2.default)(window).scroll(function () {
 			var scrollPos = (0, _jquery2.default)(window).scrollTop();
-	
+			// fixes Nav Bar to top of screen when it reaches the top
 			if (scrollPos >= navOffset) {
 				(0, _jquery2.default)('.nav').addClass('fixed');
 			} else {
 				(0, _jquery2.default)('.nav').removeClass('fixed'); // removes fixed class when moving back into splash page
+			}
+	
+			if (scrollPos >= 0 && scrollPos < about * 0.5) {
+				console.log('splash fires');
+			} else if (scrollPos > about * 0.5 && scrollPos < (projects - about) * 0.5 + about) {
+				console.log('splash disappears about fire');
+			} else if (scrollPos > (projects - about) * 0.5 + about && scrollPos < (contacts - projects) * 0.5 + projects) {
+				console.log('about disappears projects fire');
+			} else if (scrollPos > (contacts - projects) * 0.5 + projects) {
+				console.log('projects disappears contacts fire');
 			}
 		});
 	
@@ -128,6 +150,20 @@
 		(0, _jquery2.default)('.js-contacts').on('click', function () {
 			initScroll('contacts');
 		});
+	
+		// Animated Scroll
+		// $(window).scroll(function(){
+	
+		// 	let scrollPos = $(window).scrollTop();
+	
+	
+		// 	// if (scrollPos >= navOffset){
+	
+		// 	// } else {
+		// 	// 	 // removes fixed class when moving back into splash page
+		// 	// }
+		// })	
+	
 	});
 
 /***/ }),

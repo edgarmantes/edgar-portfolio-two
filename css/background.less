@@ -1,6 +1,6 @@
 
 
-.test-img {
+html {
 	background-color: white;
 }
 
@@ -25,6 +25,22 @@ splash page
 
 .splash-top, .splash-bottom {
 	background-color: white;
+}
+
+.white {
+	background-color: white;
+	animation: fadeInBack 2s;
+}
+
+@keyframes fadeInBack {
+	0% {
+		opacity: 1;
+		z-index: 2;
+	}
+	100% {
+		opacity: 0;
+		z-index: -1;
+	}
 }
 
 
@@ -129,10 +145,9 @@ contacts
 		background-color: rgb(217, 217, 217);
 	}
 
-	.edgar-anima {
+	.about-cont {
 		background-image: url(../images/edgar.png);
-		background-size: 39%;
-		/*background-attachment: fixed;*/
+		background-size: 30%;
 		background-repeat: no-repeat;
 		background-position: center center;
 	}

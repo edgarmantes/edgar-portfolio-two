@@ -1,7 +1,7 @@
 /************************
 uses variable to common properties
 *************************/
-.test-img {
+html {
   background-color: white;
 }
 /***************************
@@ -23,6 +23,20 @@ splash page
 .splash-top,
 .splash-bottom {
   background-color: white;
+}
+.white {
+  background-color: white;
+  animation: fadeInBack 2s;
+}
+@keyframes fadeInBack {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 /***************************
 nav
@@ -95,10 +109,9 @@ contacts
   .about {
     background-color: #d9d9d9;
   }
-  .edgar-anima {
+  .about-cont {
     background-image: url(../images/edgar.png);
-    background-size: 39%;
-    /*background-attachment: fixed;*/
+    background-size: 30%;
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -167,6 +180,7 @@ splash page
 .splash {
   width: 80%;
   margin-bottom: -1px;
+  overflow: hidden;
 }
 .splash-img > img {
   width: 102%;
@@ -187,9 +201,17 @@ splash page
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  height: 92vh;
   left: 0;
   z-index: -1;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /***************************
 nav
@@ -294,6 +316,18 @@ projects
 .project-btn img {
   padding: 8px 10.5%;
   max-width: 31%;
+}
+.project1 {
+  animation: RL 2s;
+}
+.project2 {
+  animation: LR 2s;
+}
+.project3 {
+  animation: RL 2s;
+}
+.project4 {
+  animation: LR 2s;
 }
 /*scrummage*/
 /***************************
@@ -400,10 +434,6 @@ contacts
   /***************************
 	about me
 	****************************/
-  .about-hdr {
-    display: block;
-    text-align: center;
-  }
   .about-cont {
     width: 95%;
     margin-top: 10vh;
@@ -414,23 +444,45 @@ contacts
   .about-cont .desc {
     display: inline-block;
     width: 40%;
+    padding: 70px;
   }
-  .about-par {
+  .about-cont .desc .about-hdr {
+    display: block;
+    text-align: center;
+    animation: RL 2s;
+    /*opacity: 0;*/
+  }
+  .about-cont .desc .about-par {
     margin-bottom: 25px;
     line-height: 2;
+    animation: RL 2s;
+    animation-delay: 0.3s;
+    /*opacity: 0;*/
+  }
+  .about-cont .desc .about-quote {
+    animation: RL 2s;
+    animation-delay: 0.5s;
+    /*opacity: 0;*/
   }
   .animation {
     width: 100%;
     text-align: right;
   }
-  .animation h3:nth-child(1) {
+  .animation .basketball {
+    /*opacity: 0;*/
+    animation: LR 2s;
     text-align: left;
   }
-  .animation h3:nth-child(2) {
-    text-align: center;
-  }
-  .animation h3:nth-child(3) {
+  .animation .traveling {
+    /*opacity: 0;*/
+    animation: LR 2s;
+    animation-delay: 0.3s;
     margin-right: 10%;
+  }
+  .animation .art {
+    /*opacity: 0;*/
+    animation: LR 2s;
+    animation-delay: 0.5s;
   }
   .edgar-anima {
     display: inline-block;
@@ -439,12 +491,60 @@ contacts
     vertical-align: top;
     padding-left: 41px;
   }
+  .lakers {
+    animation: RL 1.5s;
+  }
+  .surfing {
+    margin-right: 126px;
+    animation: LR 1.5s;
+  }
+  .sky_diving {
+    margin-left: 67px;
+    animation: LR 1.5s;
+  }
+  .thailand {
+    margin-right: 15px;
+    animation: LR 1.5s;
+  }
+  .singapore {
+    margin-right: 84px;
+    animation: RL 1.5s;
+  }
+  .drawing {
+    margin-right: 23px;
+    animation: RL 1.5s;
+  }
+  .graphic_design {
+    margin-right: 70px;
+    animation: LR 1.5s;
+  }
+  /*animation code*/
+  @keyframes LR {
+    0% {
+      transform: translate(100px, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  @keyframes RL {
+    0% {
+      transform: translate(-100px, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
   /***************************
 	projects
 	****************************/
   .projects {
     text-align: center;
-    height: 126vh;
+    /*height: 126vh;*/
   }
   .projects .project-hdr {
     margin: 2.5em 0;
@@ -466,7 +566,7 @@ contacts
   }
   .contact-sect ul > a > li {
     padding: 30px;
-    padding-left: 297px;
+    padding-left: 33%;
     border: none;
   }
   .contact-sect ul > a > li img {
@@ -479,6 +579,12 @@ contacts
   .contacts-cont {
     padding-top: 20vh;
     text-align: center;
+  }
+  .contacts-cont .contacts-me {
+    animation: RL 2s;
+  }
+  .contacts-cont .sources {
+    animation: LR 2s;
   }
 }
 /***************************
@@ -494,7 +600,7 @@ nav
 about me
 ****************************/
 .about-cont {
-  line-height: 1.8;
+  /*line-height: 1.8;*/
   text-align: center;
 }
 .about-quote {
@@ -578,22 +684,48 @@ contacts
 	****************************/
   .about-hdr {
     color: #3c9b40;
+    font-size: 55px;
   }
   .about-cont {
     text-align: left;
   }
   .about-cont .desc {
     line-height: 1.5;
+    font-size: 19px;
   }
   .animation {
     font-size: 70px;
+    line-height: 1;
     color: #3c9b40;
   }
   .animation h3 {
-    line-height: 3;
+    line-height: 1;
   }
   .about-quote > strong {
     color: #3c9b40;
+  }
+  .lakers {
+    font-size: 38px;
+  }
+  .surfing {
+    font-size: 46px;
+  }
+  .sky_diving {
+    font-size: 61px;
+    text-align: left;
+  }
+  .thailand {
+    font-size: 65px;
+  }
+  .singapore {
+    font-size: 35px;
+    text-align: center;
+  }
+  .drawing {
+    font-size: 38px;
+  }
+  .graphic_design {
+    font-size: 40px;
   }
   /***************************
 	projects

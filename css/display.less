@@ -69,6 +69,7 @@ splash page
 .splash {
 	width: 80%;
 	margin-bottom: -1px;
+	overflow: hidden;
 }
 
 .splash-img > img {
@@ -85,6 +86,7 @@ splash page
 
 .splash-bottom {
 	height: 41vh;
+
 }
 
 .white {
@@ -92,9 +94,18 @@ splash page
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
+    height: 92vh;
     left: 0;
     z-index: -1;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 /***************************
@@ -222,6 +233,22 @@ projects
 		max-width: 31%;
 	}
 
+}
+
+.project1 {
+	animation: RL 2s;
+}
+
+.project2 {
+	animation: LR 2s;
+} 
+
+.project3 {
+	animation: RL 2s;
+} 
+
+.project4 {
+	animation: LR 2s;
 }
 
 
@@ -381,10 +408,7 @@ contacts
 	/***************************
 	about me
 	****************************/
-	.about-hdr {
-		display: block;
-		text-align: center;
-	}
+
 
 	.about-cont {
 		width: 95%;
@@ -396,27 +420,55 @@ contacts
 		.desc {
 			display: inline-block;
 			width: 40%;
+			padding: 70px;
+
+			.about-hdr {
+				display: block;
+				text-align: center;
+				animation: RL 2s;
+				/*opacity: 0;*/
+			}
+
+			.about-par {
+				margin-bottom: 25px;
+				line-height: 2;
+				animation: RL 2s;
+				animation-delay: 0.3s;
+				/*opacity: 0;*/
+
+			}
+
+			.about-quote {
+				animation: RL 2s;
+				animation-delay: 0.5s;
+				/*opacity: 0;*/
+			}
 		}
 	}
 
-	.about-par {
-		margin-bottom: 25px;
-		line-height: 2;
-	}
 
 	.animation {
 		width: 100%;
     	text-align: right;
-		h3:nth-child(1) {
+    	
+
+		.basketball {
+			/*opacity: 0;*/
+			animation: LR 2s;
 			text-align: left;
 		}
 
-		h3:nth-child(2) {
-			text-align: center;
+		.traveling {
+			/*opacity: 0;*/
+			animation: LR 2s;
+			animation-delay: 0.3s;
+			margin-right: 10%;
 		}    	
 
-		h3:nth-child(3) {
-			margin-right: 10%;
+		.art {
+			/*opacity: 0;*/
+			animation: LR 2s;
+			animation-delay: 0.5s
 		}
 	}
 
@@ -428,14 +480,71 @@ contacts
     	padding-left: 41px;
 	}
 
+	.lakers {
+		animation: RL 1.5s;
+	}
 
+	.surfing {
+		margin-right: 126px;
+		animation: LR 1.5s;
+	}
+
+	.sky_diving {
+    	margin-left: 67px;
+    	animation: LR 1.5s;
+	}
+
+	.thailand {
+		margin-right: 15px;
+		animation: LR 1.5s;
+	}
+
+	.singapore {
+    	margin-right: 84px;
+    	animation: RL 1.5s;
+	}
+
+	.drawing {
+		margin-right: 23px;
+		animation: RL 1.5s;
+	}
+
+	.graphic_design {
+		margin-right: 70px;
+		animation: LR 1.5s;
+	}
+
+
+
+	/*animation code*/
+	@keyframes LR {
+		0% {
+			transform: translate(100px,0);
+			opacity: 0;
+		}
+		100% {
+			transform: translate(0, 0);
+			opacity: 1;	
+		}
+	}
+
+	@keyframes RL {
+		0% {
+			transform: translate(-100px,0);
+			opacity: 0;
+		}
+		100% {
+			transform: translate(0, 0);
+			opacity: 1;	
+		}
+	}
 
 	/***************************
 	projects
 	****************************/
 	.projects {
 		text-align: center;
-		height: 126vh;
+		/*height: 126vh;*/
 
 		.project-hdr {
 			margin: 2.5em 0;
@@ -463,7 +572,7 @@ contacts
 
 		ul > a > li {
 		    padding: 30px;
-		    padding-left: 297px;
+		    padding-left: 33%;
 		    border: none;
 
 		    img {
@@ -480,6 +589,14 @@ contacts
 	.contacts-cont {
 	    padding-top: 20vh;
 	    text-align: center;
+
+	    .contacts-me {
+	    	animation: RL 2s;
+	    }
+
+	    .sources {
+	    	animation: LR 2s;
+	    }
 	}
 
 }
