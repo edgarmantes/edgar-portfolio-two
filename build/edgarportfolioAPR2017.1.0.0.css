@@ -179,6 +179,9 @@ splash page
   width: 101%;
   margin: -5px -2px;
 }
+.splash-bottom {
+  height: 41vh;
+}
 .white {
   background-color: white;
   position: absolute;
@@ -290,7 +293,7 @@ projects
 }
 .project-btn img {
   padding: 8px 10.5%;
-  max-width: 32%;
+  max-width: 31%;
 }
 /*scrummage*/
 /***************************
@@ -505,7 +508,7 @@ projects
 }
 .project-desc {
   color: #ffffff;
-  font-size: 15.1px;
+  font-size: 14.1px;
 }
 .project-desc p > span {
   display: block;
