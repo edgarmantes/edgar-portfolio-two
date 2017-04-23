@@ -97,7 +97,7 @@ contacts
   }
   .edgar-anima {
     background-image: url(../images/edgar.png);
-    background-size: 50%;
+    background-size: 39%;
     /*background-attachment: fixed;*/
     background-repeat: no-repeat;
     background-position: center center;
@@ -187,6 +187,9 @@ nav
   height: 8vh;
   z-index: 10;
 }
+.nav ul > li:hover {
+  cursor: pointer;
+}
 .nav ul > li {
   display: inline-block;
   list-style: none;
@@ -221,6 +224,9 @@ about me
   width: 35%;
   border-radius: 50%;
   padding-top: 10px;
+}
+.edgar-anima {
+  display: none;
 }
 /***************************
 projects
@@ -402,24 +408,34 @@ contacts
     line-height: 2;
   }
   .animation {
-    width: 50%;
+    width: 100%;
     text-align: right;
+  }
+  .animation h3:nth-child(1) {
+    text-align: left;
+  }
+  .animation h3:nth-child(2) {
+    text-align: center;
+  }
+  .animation h3:nth-child(3) {
+    margin-right: 10%;
   }
   .edgar-anima {
     display: inline-block;
-    width: 59%;
+    width: 56%;
     height: 800px;
     vertical-align: top;
+    padding-left: 41px;
   }
   /***************************
 	projects
 	****************************/
   .projects {
     text-align: center;
-    height: 101vh;
+    height: 126vh;
   }
   .projects .project-hdr {
-    margin: 1.5em 0;
+    margin: 2.5em 0;
   }
   .project {
     display: inline-block;
@@ -429,13 +445,16 @@ contacts
   /***************************
 	contacts
 	****************************/
+  .contacts-hdr {
+    margin: 64px 0 10px 0;
+  }
   .contact-sect {
     width: 49%;
     display: inline-block;
   }
   .contact-sect ul > a > li {
     padding: 30px;
-    padding-left: 258px;
+    padding-left: 297px;
     border: none;
   }
   .contact-sect ul > a > li img {
@@ -506,13 +525,13 @@ contacts
 	nav
 	****************************/
   .nav ul > li {
-    font-size: 25px;
+    font-size: 21px;
   }
   /***************************
 	about me
 	****************************/
   .about-cont .desc {
-    font-size: 24px;
+    /*font-size: 24px;*/
   }
   /***************************
 	projects
@@ -545,11 +564,24 @@ contacts
   /***************************
 	about me
 	****************************/
+  .about-hdr {
+    color: #3c9b40;
+  }
   .about-cont {
     text-align: left;
   }
   .about-cont .desc {
     line-height: 1.5;
+  }
+  .animation {
+    font-size: 70px;
+    color: #3c9b40;
+  }
+  .animation h3 {
+    line-height: 3;
+  }
+  .about-quote > strong {
+    color: #3c9b40;
   }
   /***************************
 	projects
@@ -557,6 +589,9 @@ contacts
   /***************************
 	contacts
 	****************************/
+  .contacts-hdr {
+    font-size: 3em;
+  }
 }
 /****************************
 Variables and Imports

@@ -90,6 +90,11 @@ nav
 	width: 100%;
 	height: 8vh;
 	z-index: 10;
+
+	ul > li:hover {
+		cursor: pointer;
+	}
+
 	ul > li {
 		display: inline-block;
 		list-style: none;
@@ -133,6 +138,10 @@ about me
 	width: 35%;
     border-radius: 50%;
     padding-top: 10px;
+}
+
+.edgar-anima {
+	display: none;
 }
 
 
@@ -382,18 +391,28 @@ contacts
 	}
 
 	.animation {
-		width: 50%;
+		width: 100%;
     	text-align: right;
+		h3:nth-child(1) {
+			text-align: left;
+		}
+
+		h3:nth-child(2) {
+			text-align: center;
+		}    	
+
+		h3:nth-child(3) {
+			margin-right: 10%;
+		}
 	}
 
 	.edgar-anima {
 		display: inline-block;
-		width: 59%;
+		width: 56%;
 		height: 800px;
     	vertical-align: top;
+    	padding-left: 41px;
 	}
-
-
 
 
 
@@ -402,10 +421,10 @@ contacts
 	****************************/
 	.projects {
 		text-align: center;
-		height: 101vh;
+		height: 126vh;
 
 		.project-hdr {
-			margin: 1.5em 0;
+			margin: 2.5em 0;
 		}
 	}
 
@@ -420,14 +439,17 @@ contacts
 	/***************************
 	contacts
 	****************************/
+	.contacts-hdr {
+		margin: 64px 0 10px 0;
+	}
+
 	.contact-sect {
 		width: 49%;
     	display: inline-block;
 
-
 		ul > a > li {
 		    padding: 30px;
-		    padding-left: 258px;
+		    padding-left: 297px;
 		    border: none;
 
 		    img {
