@@ -1,6 +1,6 @@
 
 
-.test-img {
+html {
 	background-color: white;
 }
 
@@ -13,7 +13,6 @@ splash page
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-position: center center;
 	margin-left: auto;
     margin-right: auto;
     width: 98%;
@@ -25,6 +24,38 @@ splash page
 
 .splash-top, .splash-bottom {
 	background-color: white;
+}
+
+.white {
+	background-color: white;
+	z-index: 2;
+	animation: fadeInBack 2s;
+}
+
+@keyframes fadeInBack {
+	0% {
+		transform: translate(0, 0, 0);
+		opacity: 1;
+		z-index: 2;
+	}
+	100% {
+		transform: translate(0, 0, 0);
+		opacity: 0;
+		z-index: -1;
+	}
+}
+
+@keyframes fadeOutBack {
+	0% {
+		transform: translate(0, 0, 0);
+		opacity: 0;
+		/*z-index: -1;*/
+	}
+	100% {
+		transform: translate(0, 0, 0);
+		opacity: 1;
+		z-index: 2;
+	}
 }
 
 
@@ -57,7 +88,7 @@ projects
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center ;
 }
 
 .project-cont {
@@ -125,14 +156,11 @@ contacts
 	/***************************
 	about me
 	****************************/
+
 	.about {
 		background-color: rgb(217, 217, 217);
-	}
-
-	.edgar-anima {
 		background-image: url(../images/edgar.png);
-		background-size: 39%;
-		/*background-attachment: fixed;*/
+		background-size: 30%;
 		background-repeat: no-repeat;
 		background-position: center center;
 	}
