@@ -12,7 +12,6 @@ splash page
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
   margin-left: auto;
   margin-right: auto;
   width: 98%;
@@ -31,20 +30,24 @@ splash page
 }
 @keyframes fadeInBack {
   0% {
+    transform: translate(0, 0, 0);
     opacity: 1;
     z-index: 2;
   }
   100% {
+    transform: translate(0, 0, 0);
     opacity: 0;
     z-index: -1;
   }
 }
 @keyframes fadeOutBack {
   0% {
+    transform: translate(0, 0, 0);
     opacity: 0;
     /*z-index: -1;*/
   }
   100% {
+    transform: translate(0, 0, 0);
     opacity: 1;
     z-index: 2;
   }
@@ -74,7 +77,7 @@ projects
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center ;
 }
 .project-cont {
   background-color: white;
@@ -119,8 +122,6 @@ contacts
 	****************************/
   .about {
     background-color: #d9d9d9;
-  }
-  .about-cont {
     background-image: url(../images/edgar.png);
     background-size: 30%;
     background-repeat: no-repeat;
@@ -167,6 +168,8 @@ main {
 .fixed {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
 }
 /*used for visually hiding but semantically avaiable for screenreaders*/
 .visuallyhidden {
@@ -182,29 +185,41 @@ main {
 /*animation code*/
 @keyframes LR {
   0% {
-    transform: translate(100px, 0);
+    transform: translate(70px, 0);
     opacity: 0;
   }
   100% {
+    transform: translate(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes LRout {
+  0% {
     transform: translate(0, 0);
     opacity: 1;
+  }
+  100% {
+    transform: translate(-70px, 0, 0);
+    opacity: 0;
   }
 }
 @keyframes RL {
   0% {
-    transform: translate(-100px, 0);
+    transform: translate(-70px, 0);
     opacity: 0;
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0, 0);
     opacity: 1;
   }
 }
 @keyframes fadeIn {
   0% {
+    transform: translate(0, 0);
     opacity: 0;
   }
   100% {
+    transform: translate(0, 0, 0);
     opacity: 1;
   }
 }
@@ -300,6 +315,7 @@ projects
 .projects {
   padding-top: 30px;
   padding-bottom: 100px;
+  min-height: 100vh;
 }
 .project {
   height: 25%;
@@ -369,6 +385,7 @@ contacts
   margin-bottom: 25px;
 }
 .contacts-cont {
+  display: none;
   padding-top: 30px;
   text-align: center;
 }
@@ -467,6 +484,7 @@ contacts
 	about me
 	****************************/
   .about-cont {
+    display: block;
     width: 95%;
     margin-top: 10vh;
   }
@@ -481,39 +499,39 @@ contacts
   .about-cont .desc .about-hdr {
     display: block;
     text-align: center;
-    animation: RL 2s;
     /*opacity: 0;*/
+    animation: RL 2s ease-in-out;
   }
   .about-cont .desc .about-par {
     margin-bottom: 25px;
     line-height: 2;
+    opacity: 0;
     animation: RL 2s;
     animation-delay: 0.3s;
-    /*opacity: 0;*/
   }
   .about-cont .desc .about-quote {
+    opacity: 0;
     animation: RL 2s;
     animation-delay: 0.5s;
-    /*opacity: 0;*/
   }
   .animation {
     width: 100%;
     text-align: right;
   }
   .animation .basketball {
-    opacity: 0;
-    /*animation: LR 2s;*/
+    /*opacity: 0;*/
+    animation: LR 2s;
     text-align: left;
   }
   .animation .traveling {
     opacity: 0;
-    /*animation: LR 2s;*/
+    animation: LR 2s;
     animation-delay: 0.3s;
     margin-right: 10%;
   }
   .animation .art {
     opacity: 0;
-    /*animation: LR 2s;*/
+    animation: LR 2s;
     animation-delay: 0.5s;
   }
   .edgar-anima {
@@ -524,33 +542,36 @@ contacts
     padding-left: 41px;
   }
   .lakers {
-    opacity: 0;
-    /*animation: RL 1.5s;*/
+    /*opacity: 0;*/
+    animation: RL 1.5s;
   }
   .surfing {
-    opacity: 0;
+    /*opacity: 0;*/
     margin-right: 126px;
-    /*animation: LR 1.5s;*/
+    animation: LR 1.5s;
   }
   .sky_diving {
-    opacity: 0;
+    /*opacity: 0;*/
     margin-left: 67px;
-    /*animation: LR 1.5s;*/
+    animation: LR 1.5s;
   }
   .thailand {
-    opacity: 0;
+    /*opacity: 0;*/
     margin-right: 15px;
-    /*animation: LR 1.5s;*/
+    animation: LR 1.5s;
   }
   .singapore {
+    /*opacity: 0;*/
     margin-right: 84px;
     animation: RL 1.5s;
   }
   .drawing {
+    /*opacity: 0;*/
     margin-right: 23px;
     animation: RL 1.5s;
   }
   .graphic_design {
+    /*opacity: 0;*/
     margin-right: 70px;
     animation: LR 1.5s;
   }
@@ -565,7 +586,8 @@ contacts
     margin: 2.5em 0;
   }
   .project {
-    display: inline-block;
+    /*inline-block*/
+    display: none;
     margin: 30px;
     vertical-align: top;
   }
