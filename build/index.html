@@ -11,12 +11,13 @@
         <link rel="stylesheet" type="text/css" href="">
     </head>
     <body>
+        <div class="white"></div>
         <div id="splash" class="wrapper splash"
             data-center="opacity:1;"
             data-center-bottom="opacity:0"
             data-anchor-targer="#splash"
         >
-            <div class="white"></div>
+            
             <div class="splash-top"></div>
             <div class="splash-img test-img"><img src="./images/edgarsplash.png"></div>
             <div class="splash-bottom"></div>
@@ -35,10 +36,15 @@
             <div id="about-me" class="about-cont">
                 <img src="./images/silo.png" alt="Edgar image">
                 
-                <div class="desc">
+                <div class="desc"
+                    data-bottom="opacity:1;"
+                    data--400-bottom-bottom="opacity:0;"
+                    data-anchor-target="#about"
+                >
                     <h1 class="about-hdr"
                         data-bottom-top="opacity:0;transform:translate(-70px,0)"
                         data-center-top="opacity:1;transform:translate(0,0)"
+                        data-anchor-target="#about-me"
                     >About Me</h1>
                     <p class="about-par"
                         data-bottom-top="opacity:0;transform:translate(-100px,0)"
@@ -51,7 +57,11 @@
                     >
                     <span>“Failure is an option. If things are not failing, you are not innovating enough.” </span><strong>– Elon Musk</strong></p>                
                 </div>
-                <div class="edgar-anima">
+                <div class="edgar-anima"
+                    data-bottom="opacity:1;"
+                    data--400-bottom-bottom="opacity:0;"
+                    data-anchor-target="#about"
+                >
                     <div class="animation">
                         <h3 class="basketball"
                             data-start="opacity:0;transform:translate(200px,0)"
@@ -117,8 +127,10 @@
         <div id="projects" class=" projects">
             <h1 class="project-hdr">Projects</h1>
             <div class="project1 project"
-                data-start="opacity:0;transform:translate(-120px,0)"
+                data-start="opacity:0;transform:translate(-220px,0)"
                 data-25-center-top="opacity:1;transform:translate(0,0)"
+                data-150-top-top="opacity:1;"
+                data-150-top-bottom="opacity:0;"
             >
                 <div class="project-cont">
                     <div class="img">
@@ -138,8 +150,10 @@
                 </div>
             </div>
             <div class="project2 project"
-                data-start="opacity:0;transform:translate(120px,0)"
+                data-start="opacity:0;transform:translate(220px,0)"
                 data-25-center-top="opacity:1;transform:translate(0,0)"
+                data-150-top-top="opacity:1;"
+                data-150-top-bottom="opacity:0;"
             >
                 <div class="project-cont">
                     <div class="img">
@@ -159,8 +173,10 @@
                 </div>
             </div>
             <div class="project3 project"
-                data-start="opacity:0;transform:translate(-120px,0)"
+                data-start="opacity:0;transform:translate(-220px,0)"
                 data-220-center-top="opacity:1;transform:translate(0,0)"
+                data-150-top-top="opacity:1;"
+                data-150-top-bottom="opacity:0;"
             >
                 <div class="project-cont">
                     <div class="img">
@@ -180,8 +196,10 @@
                 </div>
             </div>
             <div class="project4 project"
-                data-start="opacity:0;transform:translate(120px,0)"
+                data-start="opacity:0;transform:translate(220px,0)"
                 data-220-center-top="opacity:1;transform:translate(0,0)"
+                data-150-top-top="opacity:1;"
+                data-150-top-bottom="opacity:0;"
             >
                 <div class="project-cont">
                     <div class="img">
@@ -232,8 +250,13 @@
         <script type="text/javascript" src="./build/edgarportfolioAPR2017.1.0.0.js"></script>
         <script type="text/javascript" src="node_modules/skrollr/dist/skrollr.min.js"></script>
         <script type="text/javascript">
-            var s = skrollr.init();
+            var s = skrollr.init(
+
+            );
+
+
             s.refresh($('.homeSlide'));
+
         </script>
     </body>
 </html>
