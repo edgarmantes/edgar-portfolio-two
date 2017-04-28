@@ -128,85 +128,97 @@
 				(0, _jquery2.default)('.nav').removeClass('fixed'); // removes fixed class when moving back into splash page
 			}
 	
-			if (scrollPos >= -1 && scrollPos < about * 0.4) {
+			// if ( (scrollPos >= -1) && (scrollPos < (about * 0.4)) ) {
 	
-				console.log('splash fires');
-				(0, _jquery2.default)('.white').css({ 'animation': 'fadeInBack 2s', 'z-index': '-1', 'opacity': '0' });
+			// 	console.log('splash fires')
+			// 	$('.white').css({'animation':'fadeInBack 2s','z-index': '-1', 'opacity': '0'})
 	
-				(0, _jquery2.default)('.about-cont').css({ 'display': 'none' });
-				setTimeout(function (jQ) {
-					(0, _jquery2.default)('.traveling, .art, .about-par, .about-quote').css({ 'opacity': '0' });
-				}, 2000);
-			} else if (scrollPos > about * 0.45 && scrollPos < (projects - about) * 0.5 + about) {
-				console.log('splash disappears about fire');
 	
-				(0, _jquery2.default)('.white').css({ 'animation': 'fadeOutBack 2s', 'z-index': '2', 'opacity': '1' });
+			// 	$('.about-cont').css({'display':'none'});
+			// 	setTimeout( (jQ) => {				
+			// 		$('.traveling, .art, .about-par, .about-quote').css({'opacity':'0'});			
+			// 	}, 2000)
 	
-				(0, _jquery2.default)('.project').css({ 'display': 'none', 'animation': 'fadeOutBack 2s' });
+			// } else if ((scrollPos > (about * 0.45)) && (scrollPos < (((projects-about) * 0.5)+about))) {			
+			// 	console.log('splash disappears about fire');
 	
-				(0, _jquery2.default)('.about-cont').css({ 'display': '', 'animation': 'unset' });
-				(0, _jquery2.default)('.about-cont').css({ 'display': 'block' });
-				setTimeout(function () {
-					(0, _jquery2.default)('.traveling, .art, .about-par, .about-quote').css({ 'opacity': '1' });
-				}, 2000);
+			// 	$('.white').css({'animation':'fadeOutBack 2s','z-index': '2', 'opacity': '1'})
 	
-				(0, _jquery2.default)('.contacts-cont').css({ 'display': 'none' });
-			} else if (scrollPos > (projects - about) * 0.5 + about && scrollPos < (contacts - projects) * 0.5 + projects) {
-				console.log('about disappears projects fire');
+			// 	$('.project').css({'display':'none','animation':'fadeOutBack 2s'});
 	
-				// show projects
-				// $('.project').css({'display':'','animation':''});			
-				(0, _jquery2.default)('.project').css({ 'display': 'inline-block', 'animation': '' });
 	
-				// $('.about-cont').css({'animation':'LRout 2s'});
-				(0, _jquery2.default)('.about-cont').css({ 'display': 'none' });
-				setTimeout(function () {
-					(0, _jquery2.default)('.traveling, .art, .about-par, .about-quote').css({ 'opacity': '0' });
-				}, 2000);
-			} else if (scrollPos > (contacts - projects) * 0.8 + projects) {
-				console.log('projects disappears contacts fire');
+			// 	$('.about-cont').css({'display':'','animation':'unset'});
+			// 	$('.about-cont').css({'display':'block'});
+			// 	setTimeout( () => {
+			// 		$('.traveling, .art, .about-par, .about-quote').css({'opacity':'1'});
+			// 	}, 2000)
 	
-				(0, _jquery2.default)('.contacts-cont').css({ 'display': 'block' });
+			// 	$('.contacts-cont').css({'display':'none'})
 	
-				// hide projects
-				(0, _jquery2.default)('.project').css({ 'display': 'none' });
-			}
+			// } else if ( (scrollPos > (((projects-about) * 0.5)+about)) && (scrollPos < (((contacts-projects) * 0.5)+projects)) ) {
+			// 	console.log('about disappears projects fire')
+	
+			// 	// show projects
+			// 	// $('.project').css({'display':'','animation':''});			
+			// 	$('.project').css({'display':'inline-block','animation':''});			
+	
+	
+			// 	// $('.about-cont').css({'animation':'LRout 2s'});
+			// 	$('.about-cont').css({'display':'none'});
+			// 	setTimeout( () => {
+			// 		$('.traveling, .art, .about-par, .about-quote').css({'opacity':'0'});			
+			// 	}, 2000)
+	
+			// } else if ( (scrollPos > (((contacts-projects) * 0.8)+projects)) ){
+			// 	console.log('projects disappears contacts fire');
+	
+			// 	$('.contacts-cont').css({'display':'block'})
+	
+			// 	// hide projects
+			// 	$('.project').css({'display':'none'});
+	
+			// }
 		});
 	
 		/*************************************************/
 	
 		/************************************************/
 	
-		// on page refresh 
-		if (scrollPos >= 0 && scrollPos < about * 0.5) {
+		// // on page refresh 
+		// if ( (scrollPos >= 0) && (scrollPos < (about * 0.5)) ) {
 	
-			console.log('splash fires');
+		// 	console.log('splash fires')
 	
-			// setTimeout( (jQ) => {
+		// 	// setTimeout( (jQ) => {
 	
-			(0, _jquery2.default)('.traveling, .art, .about-par, .about-quote').css({ 'opacity': '0' });
-			(0, _jquery2.default)('.about-cont').css({ 'display': 'none' });
-			// }, 400)
+		// 		$('.traveling, .art, .about-par, .about-quote').css({'opacity':'0'});
+		// 		$('.about-cont').css({'display':'none'});
+		// 	// }, 400)
 	
-		} else if (scrollPos > about * 0.4 && scrollPos < (contacts - projects) * 0.35 + about) {
-			console.log('splash disappears about fire');
-			(0, _jquery2.default)('.white').css({ 'animation': 'fadeOutBack 2s', 'z-index': '2', 'opacity': '1' });
 	
-			(0, _jquery2.default)('.about-cont').css('display', 'block');
+		// } else if ((scrollPos > (about * 0.4)) && (scrollPos < (((contacts-projects) * 0.35)+about))) {	
+		// 	console.log('splash disappears about fire')
+		// 	$('.white').css({'animation':'fadeOutBack 2s','z-index': '2', 'opacity': '1'})
 	
-			setTimeout(function (jQ) {
-				// $('.about-cont').css('animation','');
-				(0, _jquery2.default)('.traveling, .art, .about-par, .about-quote').css({ 'opacity': '1' });
-			}, 600);
-		} else if (scrollPos > (projects - about) * 0.5 + about && scrollPos < (contacts - projects) * 0.5 + projects) {
-			console.log('about disappears projects fire');
+		// 	$('.about-cont').css('display','block');
 	
-			(0, _jquery2.default)('.project').css({ 'display': 'inline-block' });
-		} else if (scrollPos > (contacts - projects) * 0.5 + projects) {
-			console.log('projects disappears contacts fire');
+		// 	setTimeout( (jQ) => {
+		// 		// $('.about-cont').css('animation','');
+		// 		$('.traveling, .art, .about-par, .about-quote').css({'opacity':'1'});
+		// 	}, 600)
 	
-			(0, _jquery2.default)('.contacts-cont').css({ 'display': 'block' });
-		}
+	
+		// } else if ( (scrollPos > (((projects-about) * 0.5)+about)) && (scrollPos < (((contacts-projects) * 0.5)+projects)) ) {
+		// 	console.log('about disappears projects fire')
+	
+		// 	$('.project').css({'display':'inline-block'});	
+	
+		// } else if ( (scrollPos > (((contacts-projects) * 0.5)+projects)) ){
+		// 	console.log('projects disappears contacts fire')
+	
+		// 	$('.contacts-cont').css({'display':'block'})
+		// }
+	
 	
 		// nav buttons
 		(0, _jquery2.default)('.js-splash').on('click', function () {
