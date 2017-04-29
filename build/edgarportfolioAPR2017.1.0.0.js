@@ -71,7 +71,6 @@
 	var projects = document.getElementById('projects').offsetTop;
 	// contacts
 	var contacts = document.getElementById('contacts').offsetTop;
-	console.log(25, splash, about, projects, contacts);
 	
 	var initScroll = function initScroll(pageId) {
 		page = document.getElementById(pageId).offsetTop;

@@ -23,7 +23,6 @@ const about = document.getElementById('about').offsetTop;
 const projects = document.getElementById('projects').offsetTop;
 // contacts
 const contacts = document.getElementById('contacts').offsetTop;
-console.log(25, splash, about, projects, contacts)
 
 
 let initScroll = (pageId) => {
