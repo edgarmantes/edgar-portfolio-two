@@ -25,6 +25,19 @@ const projects = document.getElementById('projects').offsetTop;
 const contacts = document.getElementById('contacts').offsetTop;
 
 
+	// Initiates skrollr
+    var s = skrollr.init(
+        // smoothScrolling=true;
+        // skrollrBody='skrollr-body';
+    );
+
+
+    s.refresh($('.homeSlide'));
+
+
+
+
+
 let initScroll = (pageId) => {
 	page = document.getElementById(pageId).offsetTop;
 
@@ -103,6 +116,10 @@ $(document).ready( () => {
 	$('.js-contacts').on('click', () => {
 		initScroll('contacts')
 	});	
+
+
+
+
 	
 
 });
