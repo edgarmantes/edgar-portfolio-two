@@ -36,7 +36,12 @@ body, html, main {
 	height: 101vh;
 }
 
-
+#skrollr-body {
+	float: left;
+	height: 100%;
+	width: 100%;
+	z-index: -5;
+}
 
 .fixed {
 	position: fixed;
@@ -60,44 +65,44 @@ body, html, main {
 /*animation code*/
 @keyframes LR {
 	0% {
-		transform: translate(70px,0);
+		transform: translate3d(70px,0,0);
 		opacity: 0;
 	}
 	100% {
-		transform: translate(0,0,0);
+		transform: translate3d(0,0,0);
 		opacity: 1;	
 	}
 }
 
 @keyframes LRout {
 	0% {
-		transform: translate(0,0);
+		transform: translate3d(0,0);
 		opacity: 1;
 	}
 	100% {
-		transform: translate(-70px,0,0);
+		transform: translate3d(-70px,0,0);
 		opacity: 0;	
 	}
 }
 
 @keyframes RL {
 	0% {
-		transform: translate(-70px,0);
+		transform: translate3d(-70px,0,0);
 		opacity: 0;
 	}
 	100% {
-		transform: translate(0,0,0);
+		transform: translate3d(0,0,0);
 		opacity: 1;	
 	}
 }
 
 @keyframes fadeIn {
 	0% {
-		transform: translate(0, 0);
+		transform: translate3d(0, 0, 0);
 		opacity: 0;
 	}
 	100% {
-		transform: translate(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 		opacity: 1;
 	}
 }
@@ -107,7 +112,7 @@ body, html, main {
 splash page
 ****************************/
 .splash-img {
-	width: 100%;
+	width: 99%;
 	/*height: 100vh;*/
 	margin-left: auto;
 	margin-right: auto;
@@ -195,8 +200,8 @@ about me
 
 .about-cont {
 	width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 25px auto 0;
+    line-height: 1.5;
 }
 
 .about-cont > img {
@@ -217,7 +222,8 @@ projects
 .projects {
     padding-top: 30px;	
 	padding-bottom: 100px;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
+	overflow: hidden;
 }
 
 .project {
@@ -266,12 +272,11 @@ projects
 	position: absolute;
     bottom: -5px;
     width: 100%;
-	a:nth-child(-n+2) > img {
+	a:nth-child(1) > img {
 		border-right: 1px solid white;	
 	}
 	img {
-		padding: 8px 10.5%;
-		max-width: 31%;
+		padding: 5px 16%;
 	}
 
 }
@@ -303,7 +308,7 @@ contacts
 }
 
 .contacts-cont {
-	display: none;
+	/*display: none;*/
 	padding-top: 30px;
 	text-align: center;
 }
@@ -338,7 +343,7 @@ contacts
 	splash page
 	****************************/
 	.splash {
-		max-width: 710px;
+		max-width: 600px;
 	}
 
 	.splash-img > img {
@@ -470,26 +475,22 @@ contacts
 				display: block;
 				text-align: center;
 				/*opacity: 0;*/
-				animation: RL 2s ease-in-out;
+				/*animation: RL 2s ease-in-out;*/
 				
 			}
 
 			.about-par {
 				margin-bottom: 25px;
-				line-height: 2;
-
-
-				opacity: 0;
-				animation: RL 2s;
-				animation-delay: 0.3s;
+				line-height: 1.7;
+				/*animation: RL 2s;
+				animation-delay: 0.3s;*/
 				
 
 			}
 
 			.about-quote {
-				opacity: 0;
-				animation: RL 2s;
-				animation-delay: 0.5s;
+				/*animation: RL 2s;
+				animation-delay: 0.5s;*/
 				
 			}
 		}
@@ -499,25 +500,25 @@ contacts
 	.animation {
 		width: 100%;
     	text-align: right;
+    	max-width: 700px;
+    	float: right;
     	
 
 		.basketball {
 			/*opacity: 0;*/
-			animation: LR 2s;
+			/*animation: LR 2s;*/
 			text-align: left;
 		}
 
 		.traveling {
-			opacity: 0;
-			animation: LR 2s;
-			animation-delay: 0.3s;
+			/*animation: LR 2s;
+			animation-delay: 0.3s;*/
 			margin-right: 10%;
 		}    	
 
 		.art {
-			opacity: 0;
-			animation: LR 2s;
-			animation-delay: 0.5s
+			/*animation: LR 2s;
+			animation-delay: 0.5s*/
 		}
 	}
 
@@ -531,43 +532,43 @@ contacts
 
 	.lakers {
 		/*opacity: 0;*/
-		animation: RL 1.5s;
+		/*animation: RL 1.5s;*/
 	}
 
 	.surfing {
 		/*opacity: 0;*/
 		margin-right: 126px;
-		animation: LR 1.5s;
+		/*animation: LR 1.5s;*/
 	}
 
 	.sky_diving {
 		/*opacity: 0;*/
     	margin-left: 67px;
-    	animation: LR 1.5s;
+    	/*animation: LR 1.5s;*/
 	}
 
 	.thailand {
 		/*opacity: 0;*/
 		margin-right: 15px;
-		animation: LR 1.5s;
+		/*animation: LR 1.5s;*/
 	}
 
 	.singapore {
 		/*opacity: 0;*/
     	margin-right: 84px;
-    	animation: RL 1.5s;
+    	/*animation: RL 1.5s;*/
 	}
 
 	.drawing {
 		/*opacity: 0;*/
 		margin-right: 23px;
-		animation: RL 1.5s;
+		/*animation: RL 1.5s;*/
 	}
 
 	.graphic_design {
 		/*opacity: 0;*/
 		margin-right: 70px;
-		animation: LR 1.5s;
+		/*animation: LR 1.5s;*/
 	}
 
 
@@ -579,15 +580,22 @@ contacts
 		/*height: 126vh;*/
 
 		.project-hdr {
-			margin: 2.5em 0;
+			margin: 1.5em 0;
 		}
 	}
 
 	.project {
 		/*inline-block*/
-		display: none;
-		margin: 30px;
+		display: inline-block;
+		margin: 27px;
 		vertical-align: top;
+	}
+
+	.project-btn {
+		img {
+			padding: 8px 21%;
+		}
+
 	}
 
 
@@ -599,7 +607,7 @@ contacts
 	}
 
 	.contact-sect {
-		width: 49%;
+		width: 44%;
     	display: inline-block;
 
 		ul > a > li {
@@ -623,11 +631,11 @@ contacts
 	    text-align: center;
 
 	    .contacts-me {
-	    	animation: RL 2s;
+	    	/*animation: RL 2s;*/
 	    }
 
 	    .sources {
-	    	animation: LR 2s;
+	    	/*animation: LR 2s;*/
 	    }
 	}
 
