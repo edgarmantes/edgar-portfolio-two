@@ -25,16 +25,6 @@ const projects = document.getElementById('projects').offsetTop;
 const contacts = document.getElementById('contacts').offsetTop;
 
 
-	// Initiates skrollr
-    var s = skrollr.init(
-        // smoothScrolling=true;
-        // skrollrBody='skrollr-body';
-    );
-
-
-    s.refresh($('.homeSlide'));
-
-
 
 
 
