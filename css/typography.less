@@ -1,0 +1,227 @@
+@greenOne: rgb(47, 122, 50);
+@greenTwo: rgb(52, 168, 56);
+@greenThree: rgb(55, 191, 60);
+
+/***************************
+splash page
+****************************/
+
+
+/***************************
+nav
+****************************/
+.nav ul > li {
+	color: rgba(0,0,0,0.7);
+}
+
+/***************************
+about me
+****************************/
+
+.about-cont {
+	/*line-height: 1.8;*/
+	text-align: center;
+
+}
+
+.about-quote {
+	font-style: italic;
+}
+
+
+
+
+/***************************
+projects
+****************************/
+.project-hdr {
+	text-align: center;
+}
+
+.project-desc {
+
+	color: rgb(255, 255, 255);
+	font-size: 14.1px;	
+
+	p > span {
+		display: block;
+		margin-top: 6px;
+		word-wrap: break-word;
+		font-style: italic;
+	}
+
+	p > span > strong {
+		color: rgb(80,169,110);
+	}
+}
+
+/***************************
+contacts
+****************************/
+
+.contacts-cont {
+	color: rgb(60,155,64);
+}
+
+.contact-sect ul > a > li {
+	color: rgb(60,155,64);
+}
+
+
+
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+
+	/***************************
+	splash page
+	****************************/
+
+
+	/***************************
+	nav
+	****************************/
+	.nav {
+
+		ul > li {
+			font-size: 21px;
+		}
+	}
+
+	/***************************
+	about me
+	****************************/
+	.about-cont {
+
+		.desc {
+			/*font-size: 24px;*/
+		}
+	}
+
+
+	/***************************
+	projects
+	****************************/
+	.projects {
+
+		.project-hdr {
+			font-size: 4em;
+		}
+	}
+
+	.project-desc {
+		font-size: 19px;
+    	line-height: 1.4;
+	}
+
+	/***************************
+	contacts
+	****************************/
+	.contacts-hdr {
+		font-size: 4em;
+	}
+
+	.contact-sect {
+
+		ul > a > li {
+		    font-size: 24px;
+		}
+	}
+}
+
+
+
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+
+	/***************************
+	splash page
+	****************************/
+
+
+	/***************************
+	nav
+	****************************/
+
+
+	/***************************
+	about me
+	****************************/
+	.about-hdr {
+		color: rgb(60,155,64);
+		font-size: 55px;
+	}
+
+	.about-cont {
+		text-align: left;
+		.desc {
+			line-height: 1.5;
+			font-size: 19px;
+		}
+	}
+
+	.animation {
+		font-size: 70px;
+		line-height: 1;
+		color: @greenOne;
+
+		h3 {
+			line-height: 1;
+		}
+
+	}
+
+	.about-quote {
+
+		> strong {
+			color: rgb(60,155,64);
+		}
+	}
+
+	.lakers {
+		font-size: 38px;
+		color: @greenThree;
+	}
+
+	.surfing {
+		font-size: 46px;
+	}
+
+	.sky_diving {
+		font-size: 61px;
+		text-align: left;
+		color: @greenTwo;
+	}
+
+	.thailand {
+		font-size: 65px;
+		color: @greenTwo;
+	}
+
+	.singapore {
+		font-size: 35px;
+		text-align: center;
+		color: @greenThree;
+	}
+
+	.drawing {
+		font-size: 38px;
+	}
+
+	.graphic_design {
+		font-size: 40px;
+		color: @greenTwo;
+	}
+
+
+	/***************************
+	projects
+	****************************/
+
+
+	/***************************
+	contacts
+	****************************/
+	.contacts-hdr {
+		font-size: 3em;
+	}
+}

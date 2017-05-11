@@ -54,12 +54,23 @@
 	
 	// Smooth scrolling code
 	var page = 0;
-	var marginY = 0;
+	var marginY = window.scrollY;
 	var marginy = marginY;
-	var increment = 7;
-	var decrement = 7;
+	var increment = 5;
+	var decrement = 5;
 	var scroller = null;
 	var currentPage = 0;
+	var jQ = _jquery2.default;
+	
+	// animation variables
+	// splash
+	var splash = document.getElementById('splash').offsetTop;
+	// about
+	var about = document.getElementById('about').offsetTop;
+	// projects
+	var projects = document.getElementById('projects').offsetTop;
+	// contacts
+	var contacts = document.getElementById('contacts').offsetTop;
 	
 	var initScroll = function initScroll(pageId) {
 		page = document.getElementById(pageId).offsetTop;
@@ -90,12 +101,26 @@
 	
 	(0, _jquery2.default)(document).ready(function () {
 	
+		var count = 0;
+	
 		// sticky fixed nav on scroll.
 		var navOffset = (0, _jquery2.default)('.nav').offset().top;
 	
+		var scrollPos = (0, _jquery2.default)(window).scrollTop();
+	
+		// Fixes scroll bar when page is refreshed
+		if (scrollPos >= navOffset) {
+			(0, _jquery2.default)('.nav').addClass('fixed');
+		} else {
+			(0, _jquery2.default)('.nav').removeClass('fixed'); // removes fixed class when moving back into splash page
+		}
+	
+		// Scrolling listener
 		(0, _jquery2.default)(window).scroll(function () {
 			var scrollPos = (0, _jquery2.default)(window).scrollTop();
 	
+			var jQ = _jquery2.default;
+			// fixes Nav Bar to top of screen when it reaches the top
 			if (scrollPos >= navOffset) {
 				(0, _jquery2.default)('.nav').addClass('fixed');
 			} else {

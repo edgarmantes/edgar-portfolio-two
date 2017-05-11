@@ -1,97 +1,814 @@
 /************************
 uses variable to common properties
 *************************/
-.wrapper {
-  height: 92vh;
-}
-.test-img {
+html {
   background-color: white;
 }
 /***************************
 splash page
 ****************************/
 .splash {
-  background-color: red;
+  background-image: url(../images/beach1.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+  content: '';
+}
+.splash-img {
+  background-color: transparent;
+}
+.splash-top,
+.splash-bottom {
+  background-color: white;
+}
+.white {
+  background-color: white;
+  z-index: -1;
+}
+@keyframes fadeInBack {
+  0% {
+    transform: translate(0, 0, 0);
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    transform: translate(0, 0, 0);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes fadeOutBack {
+  0% {
+    transform: translate(0, 0, 0);
+    opacity: 0;
+    /*z-index: -1;*/
+  }
+  100% {
+    transform: translate(0, 0, 0);
+    opacity: 1;
+    z-index: 2;
+  }
 }
 /***************************
 nav
 ****************************/
 .nav {
-  background-color: white;
+  background: white;
+  background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0));
+  background: -o-linear-gradient(white, rgba(255, 255, 255, 0));
+  background: -moz-linear-gradient(white, rgba(255, 255, 255, 0));
+  background: linear-gradient(white, rgba(255, 255, 255, 0));
 }
 /***************************
 about me
 ****************************/
 .about {
-  background-color: lightblue;
+  background-color: #50a96e;
 }
 /***************************
 projects
 ****************************/
 .projects {
   background-color: lightgray;
+  background-image: url(../images/beach3.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center ;
+  /*height: 100%;*/
+  width: 100%;
+  content: 'This ';
+}
+.project-cont {
+  background-color: white;
+}
+.project-desc {
+  background-color: #000000;
 }
 /***************************
 contacts
 ****************************/
 .contacts {
-  background-color: lightpink;
+  background-color: white;
 }
-.splash-img {
-  width: 90%;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+  /***************************
+splash page
+****************************/
+  /***************************
+nav
+****************************/
+  /***************************
+about me
+****************************/
+  /***************************
+projects
+****************************/
+  /***************************
+contacts
+****************************/
+}
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  /***************************
+	about me
+	****************************/
+  .about {
+    background-color: #d9d9d9;
+    background-image: url(../images/edgar.png);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  /***************************
+	projects
+	****************************/
+  /***************************
+	contacts
+	****************************/
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.hidden {
+  display: none;
+}
+/*Needed for fixed image scroll*/
+body,
+html,
+main {
+  height: 100%;
+  /*width: 100vw;*/
+}
+.wrapper {
+  height: 92vh;
+}
+.wrappers {
+  height: 101vh;
+}
+#skrollr-body {
+  float: left;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
 }
 .fixed {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+}
+/*used for visually hiding but semantically avaiable for screenreaders*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*animation code*/
+@keyframes LR {
+  0% {
+    transform: translate3d(70px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes LRout {
+  0% {
+    transform: translate3d(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-70px, 0, 0);
+    opacity: 0;
+  }
+}
+@keyframes RL {
+  0% {
+    transform: translate3d(-70px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 /***************************
 splash page
 ****************************/
+.splash-img {
+  width: 99%;
+  /*height: 100vh;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+.splash {
+  width: 80%;
+  margin-bottom: -1px;
+  overflow: hidden;
+}
+.splash-img > img {
+  width: 102%;
+  margin: 0 -1px;
+}
+.splash-top,
+.splash-bottom {
+  height: 24vh;
+  border: none;
+  width: 101%;
+  margin: -5px -2px;
+}
+.splash-bottom {
+  height: 41vh;
+}
+.white {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 92vh;
+  left: 0;
+  z-index: -1;
+}
 /***************************
 nav
 ****************************/
 .nav {
   width: 100%;
   height: 8vh;
+  z-index: 10;
+}
+.nav ul > li:hover {
+  cursor: pointer;
 }
 .nav ul > li {
   display: inline-block;
   list-style: none;
   font-size: 14px;
-  margin-right: 5px;
+  padding: 0 8px;
+  border-right: 1px solid gray;
+}
+.nav ul > li > img {
+  height: 13px;
 }
 .nav-wrap {
   width: 100%;
   height: 8vh;
 }
+.nav > ul {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+}
 /***************************
 about me
 ****************************/
+.about-hdr {
+  display: none;
+}
+.about-cont {
+  width: 80%;
+  margin: 25px auto 0;
+  line-height: 1.5;
+}
+.about-cont > img {
+  width: 35%;
+  border-radius: 50%;
+  padding-top: 10px;
+}
+.edgar-anima {
+  display: none;
+}
 /***************************
 projects
 ****************************/
+.projects {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  /*min-height: 100vh;*/
+  overflow: hidden;
+}
+.project {
+  height: 25%;
+  width: 90%;
+  margin: 20px auto;
+}
+.project-cont {
+  height: 235px;
+  text-align: center;
+}
+.project-cont .img {
+  display: inline-block;
+  width: 38%;
+  height: 100%;
+}
+.project-img {
+  display: inline-block;
+  max-width: 97px;
+  padding-top: 38px;
+}
+.project-desc {
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+  position: relative;
+  vertical-align: top;
+}
+.project-desc p {
+  padding: 1em;
+}
+.project-desc p > span {
+  display: block;
+  margin-top: 6px;
+  word-wrap: break-word;
+  font-style: italic;
+}
+.project-btn {
+  border-top: 1px solid white;
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+}
+.project-btn a:nth-child(1) > img {
+  border-right: 1px solid white;
+}
+.project-btn img {
+  padding: 5px 16%;
+}
+.project1 {
+  animation: RL 2s;
+}
+.project2 {
+  animation: LR 2s;
+}
+.project3 {
+  animation: RL 2s;
+}
+.project4 {
+  animation: LR 2s;
+}
+/*scrummage*/
 /***************************
 contacts
 ****************************/
-/****************************
-Variables and Imports
-****************************/
+.contacts-hdr {
+  margin-bottom: 25px;
+}
+.contacts-cont {
+  /*display: none;*/
+  padding-top: 30px;
+  text-align: center;
+}
+.contact-sect {
+  height: 320px;
+  padding: 30px 0;
+}
+.contact-sect ul > a > li {
+  padding: 23px;
+  border-top: 1px solid lightgray;
+  text-align: initial;
+  padding-left: 80px;
+}
+.contact-sect ul > a:nth-child(3) > li {
+  border-bottom: 1px solid lightgray;
+}
+.contact-sect ul > a > li > img {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+  /***************************
+	splash page
+	****************************/
+  .splash {
+    max-width: 600px;
+  }
+  .splash-img > img {
+    margin: -2px -3px;
+  }
+  .splash-top {
+    height: 17vh;
+  }
+  /***************************
+	nav
+	****************************/
+  .nav ul {
+    padding: 2rem;
+  }
+  .nav ul > li {
+    padding: 0 25px;
+    height: 20px;
+  }
+  /***************************
+	about me
+	****************************/
+  .about-cont > img {
+    padding-top: 60px;
+  }
+  /***************************
+	projects
+	****************************/
+  .projects .project-hdr {
+    margin: 1em 0;
+  }
+  .project {
+    max-width: 650px;
+  }
+  .project-img {
+    width: 124px;
+    max-width: unset;
+  }
+  .project-cont .img {
+    width: 39%;
+    margin-right: 2px;
+  }
+  /***************************
+	contacts
+	****************************/
+  .contacts-hdr {
+    margin: 1em 0;
+  }
+  .contact-sect {
+    height: 435px;
+  }
+  .contact-sect ul > a > li {
+    padding-left: 160px;
+  }
+}
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  .nav ul > li {
+    padding: 0 60px;
+  }
+  .nav ul > li img {
+    height: 25px;
+  }
+  /***************************
+	about me
+	****************************/
+  .about-cont {
+    display: block;
+    width: 95%;
+    margin-top: 10vh;
+  }
+  .about-cont > img {
+    display: none;
+  }
+  .about-cont .desc {
+    display: inline-block;
+    width: 40%;
+    padding: 70px;
+  }
+  .about-cont .desc .about-hdr {
+    display: block;
+    text-align: center;
+    /*opacity: 0;*/
+    /*animation: RL 2s ease-in-out;*/
+  }
+  .about-cont .desc .about-par {
+    margin-bottom: 25px;
+    line-height: 1.7;
+    /*animation: RL 2s;
+				animation-delay: 0.3s;*/
+  }
+  .about-cont .desc .about-quote {
+    /*animation: RL 2s;
+				animation-delay: 0.5s;*/
+  }
+  .animation {
+    width: 100%;
+    text-align: right;
+    max-width: 700px;
+    float: right;
+  }
+  .animation .basketball {
+    /*opacity: 0;*/
+    /*animation: LR 2s;*/
+    text-align: left;
+  }
+  .animation .traveling {
+    /*animation: LR 2s;
+			animation-delay: 0.3s;*/
+    margin-right: 10%;
+  }
+  .animation .art {
+    /*animation: LR 2s;
+			animation-delay: 0.5s*/
+  }
+  .edgar-anima {
+    display: inline-block;
+    width: 56%;
+    height: 800px;
+    vertical-align: top;
+    padding-left: 41px;
+  }
+  .lakers {
+    /*opacity: 0;*/
+    /*animation: RL 1.5s;*/
+  }
+  .surfing {
+    /*opacity: 0;*/
+    margin-right: 126px;
+    /*animation: LR 1.5s;*/
+  }
+  .sky_diving {
+    /*opacity: 0;*/
+    margin-left: 67px;
+    /*animation: LR 1.5s;*/
+  }
+  .thailand {
+    /*opacity: 0;*/
+    margin-right: 15px;
+    /*animation: LR 1.5s;*/
+  }
+  .singapore {
+    /*opacity: 0;*/
+    margin-right: 84px;
+    /*animation: RL 1.5s;*/
+  }
+  .drawing {
+    /*opacity: 0;*/
+    margin-right: 23px;
+    /*animation: RL 1.5s;*/
+  }
+  .graphic_design {
+    /*opacity: 0;*/
+    margin-right: 70px;
+    /*animation: LR 1.5s;*/
+  }
+  /***************************
+	projects
+	****************************/
+  .projects {
+    text-align: center;
+    /*height: 126vh;*/
+  }
+  .projects .project-hdr {
+    margin: 1.5em 0;
+  }
+  .project {
+    /*inline-block*/
+    display: inline-block;
+    margin: 27px;
+    vertical-align: top;
+  }
+  .project-btn img {
+    padding: 8px 21%;
+  }
+  /***************************
+	contacts
+	****************************/
+  .contacts-hdr {
+    margin: 64px 0 10px 0;
+  }
+  .contact-sect {
+    width: 44%;
+    display: inline-block;
+  }
+  .contact-sect ul > a > li {
+    padding: 30px;
+    padding-left: 33%;
+    border: none;
+  }
+  .contact-sect ul > a > li img {
+    width: 35px;
+    margin-right: 28px;
+  }
+  .contact-sect ul > a:nth-child(3) > li {
+    border-bottom: none;
+  }
+  .contacts-cont {
+    padding-top: 20vh;
+    text-align: center;
+  }
+  .contacts-cont .contacts-me {
+    /*animation: RL 2s;*/
+  }
+  .contacts-cont .sources {
+    /*animation: LR 2s;*/
+  }
+}
 /***************************
 splash page
 ****************************/
 /***************************
 nav
 ****************************/
+.nav ul > li {
+  color: rgba(0, 0, 0, 0.7);
+}
 /***************************
 about me
 ****************************/
+.about-cont {
+  /*line-height: 1.8;*/
+  text-align: center;
+}
+.about-quote {
+  font-style: italic;
+}
 /***************************
 projects
 ****************************/
+.project-hdr {
+  text-align: center;
+}
+.project-desc {
+  color: #ffffff;
+  font-size: 14.1px;
+}
+.project-desc p > span {
+  display: block;
+  margin-top: 6px;
+  word-wrap: break-word;
+  font-style: italic;
+}
+.project-desc p > span > strong {
+  color: #50a96e;
+}
 /***************************
 contacts
 ****************************/
+.contacts-cont {
+  color: #3c9b40;
+}
+.contact-sect ul > a > li {
+  color: #3c9b40;
+}
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  .nav ul > li {
+    font-size: 21px;
+  }
+  /***************************
+	about me
+	****************************/
+  .about-cont .desc {
+    /*font-size: 24px;*/
+  }
+  /***************************
+	projects
+	****************************/
+  .projects .project-hdr {
+    font-size: 4em;
+  }
+  .project-desc {
+    font-size: 19px;
+    line-height: 1.4;
+  }
+  /***************************
+	contacts
+	****************************/
+  .contacts-hdr {
+    font-size: 4em;
+  }
+  .contact-sect ul > a > li {
+    font-size: 24px;
+  }
+}
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  /***************************
+	about me
+	****************************/
+  .about-hdr {
+    color: #3c9b40;
+    font-size: 55px;
+  }
+  .about-cont {
+    text-align: left;
+  }
+  .about-cont .desc {
+    line-height: 1.5;
+    font-size: 19px;
+  }
+  .animation {
+    font-size: 70px;
+    line-height: 1;
+    color: #2f7a32;
+  }
+  .animation h3 {
+    line-height: 1;
+  }
+  .about-quote > strong {
+    color: #3c9b40;
+  }
+  .lakers {
+    font-size: 38px;
+    color: #37bf3c;
+  }
+  .surfing {
+    font-size: 46px;
+  }
+  .sky_diving {
+    font-size: 61px;
+    text-align: left;
+    color: #34a838;
+  }
+  .thailand {
+    font-size: 65px;
+    color: #34a838;
+  }
+  .singapore {
+    font-size: 35px;
+    text-align: center;
+    color: #37bf3c;
+  }
+  .drawing {
+    font-size: 38px;
+  }
+  .graphic_design {
+    font-size: 40px;
+    color: #34a838;
+  }
+  /***************************
+	projects
+	****************************/
+  /***************************
+	contacts
+	****************************/
+  .contacts-hdr {
+    font-size: 3em;
+  }
+}
+/****************************
+Variables and Imports
+****************************/
+/*template*/
+/****iPad View*****/
+@media only screen and (min-width: 640px /) {
+  /***************************
+	splash page
+	****************************/
+  /***************************
+	nav
+	****************************/
+  /***************************
+	about me
+	****************************/
+  /***************************
+	projects
+	****************************/
+  /***************************
+	contacts
+	****************************/
+}
 /*# sourceMappingURL=edgarportfolioAPR2017.1.0.0.css.map */

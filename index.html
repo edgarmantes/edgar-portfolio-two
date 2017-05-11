@@ -10,30 +10,253 @@
         <link rel="stylesheet" type="text/css" href="./build/edgarportfolioAPR2017.1.0.0.css">
         <link rel="stylesheet" type="text/css" href="">
     </head>
-    <body class="">
-        <div id="splash" class="wrapper splash">
-            <div class="splash-img test-img">splash image</div>
-            <div class="status"></div>
-        </div>
-        <div class="nav-wrap">
-            <div class="nav">
-                <ul>
-                    <li class="js-splash">splash</li>
-                    <li class="js-about">about me</li>
-                    <li class="js-projects">my projects</li>
-                    <li class="js-contacts">contact me</li>
-                </ul>
+    <body>
+
+        <div id="skrollr-body">
+            <div class="white"></div>
+            <div id="splash" class="wrapper splash"
+                data-center="opacity:1;"
+                data-center-bottom="opacity:0"
+                data-anchor-targer="#splash"
+            >
+                
+                <div class="splash-top"></div>
+                <div class="splash-img test-img"><img src="./images/edgarsplash.png"></div>
+                <div class="splash-bottom"></div>
+            </div
+            ><div id="about" class="wrappers about">
+                <div class="nav-wrap">
+                    <div class="nav">
+                        <ul>
+                            <li class="js-splash"><img src="./images/edgar-icon.png" alt="edgars icon"></li>
+                            <li class="js-about">about me</li>
+                            <li class="js-projects">my projects</li>
+                            <li class="js-contacts">contact me</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="about-me" class="about-cont">
+                    <img src="./images/silo.png" alt="Edgar image">
+                    
+                    <div class="desc"
+                        data-bottom="opacity:1;"
+                        data--400-bottom-bottom="opacity:0;"
+                        data-anchor-target="#about"
+                    >
+                        <h1 class="about-hdr"
+                            data-bottom-top="opacity:0;transform:translate(-70px,0)"
+                            data-center-top="opacity:1;transform:translate(0,0)"
+                            data-anchor-target="#about-me"
+                        >About Me</h1>
+                        <p class="about-par"
+                            data-bottom-top="opacity:0;transform:translate(-100px,0)"
+                            data-70-center-top="opacity:1;transform:translate(0,0)"
+                        >I am a full-stack web developer who loves to code in Javascript. Well versed in the MERN stack environment, and still continue learning new things everyday. I believe life is too short, so one must never sit back and watch but rather live, and learn. There is a lot to experience with so little time, so never stop learning. I'm into health and fitness, professional basketball and appreciate creativity and innovation. </p>
+
+                        <p class="about-quote"
+                            data-bottom-top="opacity:0;transform:translate(-70px,0)"
+                            data-220-center-top="opacity:1;transform:translate(0,0)"
+                        >
+                        <span>“Failure is an option. If things are not failing, you are not innovating enough.” </span><strong>– Elon Musk</strong></p>                
+                    </div>
+                    <div class="edgar-anima"
+                        data-bottom="opacity:1;"
+                        data--400-bottom-bottom="opacity:0;"
+                        data-anchor-target="#about"
+                    >
+                        <div class="animation">
+                            <h3 class="basketball"
+                                data-start="opacity:0;transform:translate(200px,0)"
+                                data-center-top="opacity:1;transform:translate(0,0)"
+                            >BASKETBALL</h3>
+
+                            <h3 class="lakers"
+                                data-start="opacity:0;transform:translate(-200px,0)"
+                                data-20-center-top="opacity:1;transform:translate(0,0)"
+                            >LA Lakers</h3>
+
+                            <h3 class="surfing"
+                                data-start="opacity:0;transform:translate(-100px,0)"
+                                data-center-top="opacity:1;transform:translate(0,0)"
+                            >SURFING</h3>
+
+                            <h3 class="sky_diving"
+                                data-bottom-top="opacity:0;transform:translate(300px,0)"
+                                data-170-top-top="opacity:1;transform:translate(0,0)"
+                                data-anchor-target="#about-me"
+                            >Sky Diving</h3>
+
+                            <h3 class="traveling"
+                                data-start="opacity:0;transform:translate(120px,0)"
+                                data-25-center-top="opacity:1;transform:translate(0,0)"
+                            >TRAVELING</h3>
+
+                            <h3 class="thailand"
+                                data-start="opacity:0;transform:translate(70px,0)"
+                                data-25-center-top="opacity:1;transform:translate(0,0)"
+                            >THAILAND</h3>
+
+                            <h3 class="singapore"
+                                data-center-top="opacity:0;transform:translate(200px,0)"
+                                data-170-top-top="opacity:1;transform:translate(0,0)"
+                                data-anchor-target="#about-me"
+                            >Singapore</h3>
+
+                            <h3 class="art"
+                                data-start="opacity:0;transform:translate(50px,0)"
+                                data-bottom-bottom="opacity:1;transform:translate(0,0)"
+                                data-anchor-target="#about-me"
+                            >ART</h3>
+
+                            <h3 class="drawing"
+                                data-start="opacity:0;transform:translate(-500px,0)"
+                                data-bottom-bottom="opacity:1;transform:translate(0,0)"
+                                data-anchor-target="#about-me"
+                            >drawing</h3>
+
+                            <h3 class="graphic_design"
+                                data-start="opacity:0;transform:translate(-50px,0)"
+                                data-bottom-bottom="opacity:1;transform:translate(0,0)"
+                                data-anchor-target="#about-me"
+                            >GRAPHIC DESIGN</h3>
+
+                        </div>
+                        <!-- <img src="./images/edgar.png"> -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class=" projects">
+                <h1 class="project-hdr">Projects</h1>
+                <div class="project1 project"
+                    data-start="opacity:0;transform:translate(-220px,0)"
+                    data-25-center-top="opacity:1;transform:translate(0,0)"
+                    data-150-top-top="opacity:1;"
+                    data-150-top-bottom="opacity:0;"
+                >
+                    <div class="project-cont">
+                        <div class="img">
+                            <img class="project-img" src="./images/scrum2.png" alt="Scrum-mage">
+                        </div>
+                        <div class="project-desc">
+                            <p>Get organized and be more productive using the Scrum-mage app. Get to work on this Scrum framework.
+                            <span class="p-roles"><strong>Role:</strong> Designer/Coder
+                            <strong>Tech:</strong> React/Redux/Node/Passport/MongoDB/Mongoose</span>
+                            </p>
+                            <div class="project-btn">
+                                <a href="https://github.com/shootermantes/Scrum-magin-" target="_blank"><img src="./images/github.png"><p class="visuallyhidden">project github source code</p></a
+                                ><a href="https://salty-reef-77673.herokuapp.com/#/" target="_blank"><img src="./images/web2.png"><p class="visuallyhidden">project website</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project2 project"
+                    data-start="opacity:0;transform:translate(220px,0)"
+                    data-25-center-top="opacity:1;transform:translate(0,0)"
+                    data-150-top-top="opacity:1;"
+                    data-150-top-bottom="opacity:0;"
+                >
+                    <div class="project-cont">
+                        <div class="img">
+                            <img class="project-img" src="./images/timetracker.png" alt="Time Tracker"> 
+                        </div>              
+                        <div class="project-desc">
+                            <p>Track the time to complete your project. No more guessing, track your time using this app.
+                            <span class=""><strong>Role:</strong> Designer/Coder
+                            <strong>Tech:</strong> React/Redux/Node/Passport/MongoDB/Mongoose</span>
+                            </p>
+                            <div class="project-btn">
+                                <a href="https://github.com/shootermantes/react-redux-timer" target="_blank"><img src="./images/github.png"><p class="visuallyhidden">project github source code</p></a
+                                ><a href="https://agile-plateau-82595.herokuapp.com/#/" target="_blank"><img src="./images/web2.png"><p class="visuallyhidden">project website</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project3 project"
+                    data-start="opacity:0;transform:translate(-220px,0)"
+                    data-220-center-top="opacity:1;transform:translate(0,0)"
+                    data-150-top-top="opacity:1;"
+                    data-150-top-bottom="opacity:0;"
+                >
+                    <div class="project-cont">
+                        <div class="img">
+                            <img class="project-img" src="./images/logroom.png" alt="Log Room">
+                        </div>               
+                        <div class="project-desc">
+                            <p>Get your team organized and keep the communcation clear within the team. LogRoom will help you do exactly that.
+                            <span class=""><strong>Role:</strong> Designer/Coder
+                            <strong>Tech:</strong> jQuery/Mocha/Chia/MongoDB/Mongoose</span>
+                            </p>
+                            <div class="project-btn">
+                                <a href="https://github.com/shootermantes/LogRoom" target="_blank"><img src="./images/github.png"><p class="visuallyhidden">project github source code</p></a
+                                ><a href="https://ancient-beyond-11469.herokuapp.com/" target="_blank"><img src="./images/web2.png"><p class="visuallyhidden">project website</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project4 project"
+                    data-start="opacity:0;transform:translate(220px,0)"
+                    data-220-center-top="opacity:1;transform:translate(0,0)"
+                    data-150-top-top="opacity:1;"
+                    data-150-top-bottom="opacity:0;"
+                >
+                    <div class="project-cont">
+                        <div class="img">
+                            <img class="project-img" src="./images/pub.png" alt="Map My Brewery"> 
+                        </div>              
+                        <div class="project-desc">
+                            <p>Get your team organized and keep the communcation clear within the team. LogRoom will help you do exactly that.
+                            <span class=""><strong>Role:</strong> Designer/Coder
+                            <strong>Tech:</strong> jQuery/Mocha/Chia/MongoDB/Mongoose</span>
+                            </p>
+                            <div class="project-btn">
+                                <a href="https://github.com/shootermantes/react-redux-timer" target="_blank"><img src="./images/github.png"><p class="visuallyhidden">project github source code</p></a
+                                ><a href="https://agile-plateau-82595.herokuapp.com/#/" target="_blank"><img src="./images/web2.png"><p class="visuallyhidden">project website</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+            <div id="contacts" class="wrappers contacts">
+                <div class="contacts-cont">
+                    <div class="contacts-me contact-sect"
+                        data-30-center-top="opacity:0;"
+                        data-top="opacity:1;"
+                        data-anchor-target="#contacts"
+                    >
+                        <h1 class="contacts-hdr">Contact Me</h1>
+                        <ul>
+                            <a href="mailto:edgar.mantes11@gmail.com"><li><img src="./images/email2.png" alt="email">| edgar.mantes11@gmail.com</li></a>
+                            <a href="tel:312-937-1641"><li><img src="./images/cellphone.png" alt="cellphone">| 312.937.1641</li></a>
+                            <a href="skype:familymantes?call"><li><img src="./images/skype.png">| @familymantes</li></a>
+                        </ul>
+                    </div>
+                    <div class="sources contact-sect"
+                        data-30-center-top="opacity:0;"
+                        data-top="opacity:1;"
+                        data-anchor-target="#contacts"
+                    >
+                        <h2 class="contacts-hdr">Resources</h2>
+                        <ul>
+                            <a href="https://github.com/shootermantes"><li><img src="./images/github2.png">| github</li></a>
+                            <a href="https://www.dropbox.com/s/i5pzfzbazg05hm2/ResumeWebDev-2017%20%284%29.pdf?dl=0"><li><img src="./images/resume.png">| resume</li></a>
+                            <a href="https://www.linkedin.com/in/edgar-mantes-8a28bb96/"><li><img src="./images/linked.png">| LinkedIn</li></a>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="about" class="wrapper about">
-            
-        </div>
-        <div id="projects" class="wrapper projects">
-            
-        </div>
-        <div id="contacts" class="wrapper contacts">
-            
-        </div>
         <script type="text/javascript" src="./build/edgarportfolioAPR2017.1.0.0.js"></script>
+        <script type="text/javascript" src="js/skrollr.min.js"></script>
+        <script type="text/javascript">
+            var s = skrollr.init(
+                // smoothScrolling=true;
+                // skrollrBody='skrollr-body';
+            );
+
+
+            s.refresh($('.homeSlide'));
+
+        </script>
     </body>
 </html>

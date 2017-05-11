@@ -1,25 +1,157 @@
+* {
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
 
+ul {
+	padding: 0;
+}
 
-.splash-img {
-	width: 90%;
-	height: 100vh;
-	margin-left: auto;
-	margin-right: auto;
+li {
+	list-style: none;
+
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+.hidden {
+	display: none;
+}
+
+/*Needed for fixed image scroll*/
+body, html, main {
+	height: 100%;
+	/*width: 100vw;*/
+}
+
+.wrapper {
+	height: 92vh;
+}
+
+.wrappers {
+	height: 101vh;
+}
+
+#skrollr-body {
+	float: left;
+	height: 100%;
+	width: 100%;
+	z-index: -5;
 }
 
 .fixed {
 	position: fixed;
 	top: 0;
+	left: 0;
+	right:0;
+}
+
+/*used for visually hiding but semantically avaiable for screenreaders*/
+.visuallyhidden { 
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px; 
+}
+
+/*animation code*/
+@keyframes LR {
+	0% {
+		transform: translate3d(70px,0,0);
+		opacity: 0;
+	}
+	100% {
+		transform: translate3d(0,0,0);
+		opacity: 1;	
+	}
+}
+
+@keyframes LRout {
+	0% {
+		transform: translate3d(0,0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate3d(-70px,0,0);
+		opacity: 0;	
+	}
+}
+
+@keyframes RL {
+	0% {
+		transform: translate3d(-70px,0,0);
+		opacity: 0;
+	}
+	100% {
+		transform: translate3d(0,0,0);
+		opacity: 1;	
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: translate3d(0, 0, 0);
+		opacity: 0;
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
 }
 
 
 /***************************
 splash page
 ****************************/
+.splash-img {
+	width: 99%;
+	/*height: 100vh;*/
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .splash {
-	
+	width: 80%;
+	margin-bottom: -1px;
+	overflow: hidden;
 }
+
+.splash-img > img {
+	width: 102%;
+	margin: 0 -1px;
+}
+
+.splash-top, .splash-bottom {
+    height: 24vh;
+    border: none;
+    width: 101%;
+    margin: -5px -2px;
+}
+
+.splash-bottom {
+	height: 41vh;
+
+}
+
+.white {
+	background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 92vh;
+    left: 0;
+    z-index: -1;
+}
+
+
 
 /***************************
 nav
@@ -27,24 +159,59 @@ nav
 .nav {
 	width: 100%;
 	height: 8vh;
+	z-index: 10;
+
+	ul > li:hover {
+		cursor: pointer;
+	}
+
 	ul > li {
 		display: inline-block;
 		list-style: none;
 		font-size: 14px;
-		margin-right: 5px;
+		padding: 0 8px;
+	    border-right: 1px solid gray;
+	}
+
+	ul > li > img {
+		height: 13px;
 	}
 }
+
+
 
 .nav-wrap {
 	width: 100%;
 	height: 8vh;
 }
 
+.nav > ul {
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+}
+
 /***************************
 about me
 ****************************/
-.about {
-	
+.about-hdr {
+	display: none;
+}
+
+.about-cont {
+	width: 80%;
+    margin: 25px auto 0;
+    line-height: 1.5;
+}
+
+.about-cont > img {
+	width: 35%;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+.edgar-anima {
+	display: none;
 }
 
 
@@ -53,13 +220,423 @@ about me
 projects
 ****************************/
 .projects {
-	
+    padding-top: 30px;	
+	padding-bottom: 100px;
+	/*min-height: 100vh;*/
+	overflow: hidden;
 }
 
+.project {
+	height: 25%;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.project-cont {
+	height: 235px;
+	text-align: center;
+
+	.img {
+		display: inline-block;
+    	width: 38%;
+    	height: 100%;
+	}
+}
+
+.project-img {
+	display: inline-block;
+    max-width: 97px;
+    padding-top: 38px;
+}
+
+.project-desc {
+	display: inline-block;
+	width: 60%;
+	height: 100%;
+	position: relative;
+    vertical-align: top;
+	p {
+		padding: 1em;
+	}
+
+	p > span {
+		display: block;
+		margin-top: 6px;
+		word-wrap: break-word;
+		font-style: italic;
+	}
+}
+
+.project-btn {
+	border-top: 1px solid white;
+	position: absolute;
+    bottom: -5px;
+    width: 100%;
+	a:nth-child(1) > img {
+		border-right: 1px solid white;	
+	}
+	img {
+		padding: 5px 16%;
+	}
+
+}
+
+.project1 {
+	animation: RL 2s;
+}
+
+.project2 {
+	animation: LR 2s;
+} 
+
+.project3 {
+	animation: RL 2s;
+} 
+
+.project4 {
+	animation: LR 2s;
+}
+
+
+/*scrummage*/
 
 /***************************
 contacts
 ****************************/
-.contacts {
-	
+.contacts-hdr {
+	margin-bottom: 25px;
+}
+
+.contacts-cont {
+	/*display: none;*/
+	padding-top: 30px;
+	text-align: center;
+}
+
+.contact-sect {
+	height: 320px;
+	padding: 30px 0;
+
+	ul > a > li {
+		padding: 23px;
+    	border-top: 1px solid lightgray;
+    	text-align: initial;
+    	padding-left: 80px;
+	}	
+
+	ul > a:nth-child(3) > li {
+    	border-bottom: 1px solid lightgray;
+	}
+
+	ul > a > li > img {
+		vertical-align: middle;
+		margin-right: 15px;
+	}
+}
+
+
+
+/****iPad View*****/
+@media only screen and (min-width: 640px) {
+
+	/***************************
+	splash page
+	****************************/
+	.splash {
+		max-width: 600px;
+	}
+
+	.splash-img > img {
+		margin: -2px -3px;
+	}
+
+	.splash-top {
+		height:17vh;
+	}
+
+	/***************************
+	nav
+	****************************/
+	.nav {
+
+		ul {
+			padding: 2rem;
+		}
+
+		ul > li {
+    		padding: 0 25px;
+    		height: 20px;
+		}
+	}
+
+	/***************************
+	about me
+	****************************/
+
+	.about-cont > img {
+		padding-top: 60px;
+	}
+
+
+	/***************************
+	projects
+	****************************/
+
+	.projects {
+
+		.project-hdr {
+    		margin: 1em 0;
+		}
+	}
+
+	.project {
+		max-width: 650px;
+	}
+
+	.project-img {
+		width: 124px;
+		max-width: unset;
+	}
+
+	.project-cont {
+
+		.img {
+			width: 39%;
+			margin-right: 2px;
+		}
+	}
+
+	/***************************
+	contacts
+	****************************/
+
+	.contacts {
+
+	}
+
+	.contacts-hdr {
+		margin: 1em 0;
+	}
+
+	.contact-sect {
+
+		height: 435px;
+
+		ul > a > li {
+			padding-left: 160px;
+		}
+	}
+
+}
+
+
+/****Desktop View*****/
+@media only screen and (min-width: 1000px) {
+
+	/***************************
+	splash page
+	****************************/
+
+
+	/***************************
+	nav
+	****************************/
+	.nav {
+
+		ul > li {
+			padding: 0 60px;
+
+			img {
+				height: 25px;
+			}
+		}
+	}
+
+	/***************************
+	about me
+	****************************/
+
+
+	.about-cont {
+		display: block;
+		width: 95%;
+		margin-top: 10vh;
+		 
+		> img {
+			display: none;
+		}
+
+		.desc {
+			display: inline-block;
+			width: 40%;
+			padding: 70px;
+
+			.about-hdr {
+				display: block;
+				text-align: center;
+				/*opacity: 0;*/
+				/*animation: RL 2s ease-in-out;*/
+				
+			}
+
+			.about-par {
+				margin-bottom: 25px;
+				line-height: 1.7;
+				/*animation: RL 2s;
+				animation-delay: 0.3s;*/
+				
+
+			}
+
+			.about-quote {
+				/*animation: RL 2s;
+				animation-delay: 0.5s;*/
+				
+			}
+		}
+	}
+
+
+	.animation {
+		width: 100%;
+    	text-align: right;
+    	max-width: 700px;
+    	float: right;
+    	
+
+		.basketball {
+			/*opacity: 0;*/
+			/*animation: LR 2s;*/
+			text-align: left;
+		}
+
+		.traveling {
+			/*animation: LR 2s;
+			animation-delay: 0.3s;*/
+			margin-right: 10%;
+		}    	
+
+		.art {
+			/*animation: LR 2s;
+			animation-delay: 0.5s*/
+		}
+	}
+
+	.edgar-anima {
+		display: inline-block;
+		width: 56%;
+		height: 800px;
+    	vertical-align: top;
+    	padding-left: 41px;
+	}
+
+	.lakers {
+		/*opacity: 0;*/
+		/*animation: RL 1.5s;*/
+	}
+
+	.surfing {
+		/*opacity: 0;*/
+		margin-right: 126px;
+		/*animation: LR 1.5s;*/
+	}
+
+	.sky_diving {
+		/*opacity: 0;*/
+    	margin-left: 67px;
+    	/*animation: LR 1.5s;*/
+	}
+
+	.thailand {
+		/*opacity: 0;*/
+		margin-right: 15px;
+		/*animation: LR 1.5s;*/
+	}
+
+	.singapore {
+		/*opacity: 0;*/
+    	margin-right: 84px;
+    	/*animation: RL 1.5s;*/
+	}
+
+	.drawing {
+		/*opacity: 0;*/
+		margin-right: 23px;
+		/*animation: RL 1.5s;*/
+	}
+
+	.graphic_design {
+		/*opacity: 0;*/
+		margin-right: 70px;
+		/*animation: LR 1.5s;*/
+	}
+
+
+	/***************************
+	projects
+	****************************/
+	.projects {
+		text-align: center;
+		/*height: 126vh;*/
+
+		.project-hdr {
+			margin: 1.5em 0;
+		}
+	}
+
+	.project {
+		/*inline-block*/
+		display: inline-block;
+		margin: 27px;
+		vertical-align: top;
+	}
+
+	.project-btn {
+		img {
+			padding: 8px 21%;
+		}
+
+	}
+
+
+	/***************************
+	contacts
+	****************************/
+	.contacts-hdr {
+		margin: 64px 0 10px 0;
+	}
+
+	.contact-sect {
+		width: 44%;
+    	display: inline-block;
+
+		ul > a > li {
+		    padding: 30px;
+		    padding-left: 33%;
+		    border: none;
+
+		    img {
+		    	width: 35px;
+		    	margin-right: 28px;
+		    }
+		}
+
+		ul > a:nth-child(3) > li {
+		    border-bottom: none;
+		}
+	}
+
+	.contacts-cont {
+	    padding-top: 20vh;
+	    text-align: center;
+
+	    .contacts-me {
+	    	/*animation: RL 2s;*/
+	    }
+
+	    .sources {
+	    	/*animation: LR 2s;*/
+	    }
+	}
+
 }
