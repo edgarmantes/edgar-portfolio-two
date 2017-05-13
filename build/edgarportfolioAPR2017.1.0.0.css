@@ -14,7 +14,6 @@ splash page
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  width: 98%;
   content: '';
 }
 .splash-img {
@@ -23,6 +22,7 @@ splash page
 .splash-top,
 .splash-bottom {
   background-color: white;
+  margin-top: -5px;
 }
 .white {
   background-color: white;
@@ -57,10 +57,10 @@ nav
 ****************************/
 .nav {
   background: white;
-  background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0));
-  background: -o-linear-gradient(white, rgba(255, 255, 255, 0));
-  background: -moz-linear-gradient(white, rgba(255, 255, 255, 0));
-  background: linear-gradient(white, rgba(255, 255, 255, 0));
+  background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background: -o-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background: -moz-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background: linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 }
 /***************************
 about me
@@ -87,6 +87,30 @@ projects
 }
 .project-desc {
   background-color: #000000;
+}
+.project1 > .project-cont > .img {
+  background-image: url(../images/scrum3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project2 > .project-cont > .img {
+  background-image: url(../images/time4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project3 > .project-cont > .img {
+  background-image: url(../images/LogRoom3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project4 > .project-cont > .img {
+  background-image: url(../images/brew3.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
 }
 /***************************
 contacts
@@ -125,10 +149,6 @@ contacts
 	****************************/
   .about {
     background-color: #d9d9d9;
-    background-image: url(../images/edgar.png);
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position: center center;
   }
   /***************************
 	projects
@@ -173,6 +193,7 @@ main {
   height: 100%;
   width: 100%;
   z-index: -5;
+  overflow: hidden;
 }
 .fixed {
   position: fixed;
@@ -235,24 +256,29 @@ main {
 /***************************
 splash page
 ****************************/
+.contain {
+  text-align: center;
+}
 .splash-img {
-  width: 99%;
-  /*height: 100vh;*/
   margin-left: auto;
   margin-right: auto;
 }
 .splash {
-  width: 80%;
+  display: inline-block;
   margin-bottom: -1px;
   overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 600px;
 }
 .splash-img > img {
-  width: 102%;
-  margin: 0 -1px;
+  max-width: 101%;
+  max-height: 75vh;
+  margin: 0 -2px;
 }
 .splash-top,
 .splash-bottom {
-  height: 24vh;
+  height: 17vh;
   border: none;
   width: 101%;
   margin: -5px -2px;
@@ -302,7 +328,7 @@ nav
 /***************************
 about me
 ****************************/
-.about-hdr {
+.aboutme > img {
   display: none;
 }
 .about-cont {
@@ -312,6 +338,7 @@ about me
 }
 .about-cont > img {
   width: 35%;
+  max-width: 150px;
   border-radius: 50%;
   padding-top: 10px;
 }
@@ -335,6 +362,7 @@ projects
 .project-cont {
   height: 235px;
   text-align: center;
+  border: 3px double;
 }
 .project-cont .img {
   display: inline-block;
@@ -348,7 +376,7 @@ projects
 }
 .project-desc {
   display: inline-block;
-  width: 60%;
+  width: 61%;
   height: 100%;
   position: relative;
   vertical-align: top;
@@ -365,14 +393,14 @@ projects
 .project-btn {
   border-top: 1px solid white;
   position: absolute;
-  bottom: -5px;
+  bottom: -7px;
   width: 100%;
 }
 .project-btn a:nth-child(1) > img {
   border-right: 1px solid white;
 }
 .project-btn img {
-  padding: 5px 17%;
+  padding: 5px 16%;
 }
 .project1 {
   animation: RL 2s;
@@ -460,7 +488,6 @@ contacts
   }
   .project-cont .img {
     width: 39%;
-    margin-right: 2px;
   }
   /***************************
 	contacts
@@ -492,6 +519,19 @@ contacts
   /***************************
 	about me
 	****************************/
+  .aboutme {
+    display: inline-block;
+    width: 45%;
+    float: right;
+    margin-right: 7%;
+    margin-top: 6vh;
+  }
+  .aboutme > img {
+    display: unset;
+    max-width: 700px;
+    max-height: 636px;
+    width: 100%;
+  }
   .about-cont {
     display: block;
     width: 95%;
@@ -502,7 +542,7 @@ contacts
   }
   .about-cont .desc {
     display: inline-block;
-    width: 40%;
+    width: 45%;
     padding: 70px;
   }
   .about-cont .desc .about-hdr {
@@ -697,6 +737,7 @@ contacts
 	****************************/
   .about-cont .desc {
     /*font-size: 24px;*/
+    line-height: 6vw;
   }
   /***************************
 	projects

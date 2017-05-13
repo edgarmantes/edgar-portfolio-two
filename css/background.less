@@ -15,7 +15,6 @@ splash page
 	background-repeat: no-repeat;
 	margin-left: auto;
     margin-right: auto;
-    width: 98%;
     content: '';
 }
 
@@ -25,6 +24,7 @@ splash page
 
 .splash-top, .splash-bottom {
 	background-color: white;
+	margin-top: -5px;
 }
 
 .white {
@@ -64,10 +64,10 @@ nav
 ****************************/
 .nav {
 	background: white;
-    background: -webkit-linear-gradient(white, rgba(255,255,255,0)); 
-    background: -o-linear-gradient(white, rgba(255,255,255,0)); 
-    background: -moz-linear-gradient(white, rgba(255,255,255,0));
-    background: linear-gradient(white, rgba(255,255,255,0));
+    background: -webkit-linear-gradient(white, rgba(255,255,255,0), rgba(255,255,255,0)); 
+    background: -o-linear-gradient(white, rgba(255,255,255,0), rgba(255,255,255,0)); 
+    background: -moz-linear-gradient(white, rgba(255,255,255,0), rgba(255,255,255,0));
+    background: linear-gradient(white, rgba(255,255,255,0), rgba(255,255,255,0));
 }
 
 /***************************
@@ -100,6 +100,34 @@ projects
 
 .project-desc {
 	background-color: rgb(0,0,0);
+}
+
+.project1 > .project-cont > .img {
+	background-image: url(../images/scrum3.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.project2 > .project-cont > .img {
+	background-image: url(../images/time4.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;	
+}
+
+.project3 > .project-cont > .img {
+	background-image: url(../images/LogRoom3.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;	
+}
+
+.project4 > .project-cont > .img {
+	background-image: url(../images/brew3.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
 }
 
 
@@ -162,10 +190,6 @@ contacts
 
 	.about {
 		background-color: rgb(217, 217, 217);
-		background-image: url(../images/edgar.png);
-		background-size: 30%;
-		background-repeat: no-repeat;
-		background-position: center center;
 	}
 
 
