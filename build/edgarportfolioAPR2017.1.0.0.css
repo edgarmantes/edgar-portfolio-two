@@ -523,11 +523,14 @@ contacts
     display: inline-block;
     width: 45%;
     float: right;
-    margin-right: 10%;
+    margin-right: 7%;
+    margin-top: 6vh;
   }
   .aboutme > img {
     display: unset;
     max-width: 700px;
+    max-height: 636px;
+    width: 100%;
   }
   .about-cont {
     display: block;
@@ -539,7 +542,7 @@ contacts
   }
   .about-cont .desc {
     display: inline-block;
-    width: 40%;
+    width: 45%;
     padding: 70px;
   }
   .about-cont .desc .about-hdr {
@@ -734,6 +737,7 @@ contacts
 	****************************/
   .about-cont .desc {
     /*font-size: 24px;*/
+    line-height: 6vw;
   }
   /***************************
 	projects
