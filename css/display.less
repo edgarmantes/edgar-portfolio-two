@@ -41,6 +41,7 @@ body, html, main {
 	height: 100%;
 	width: 100%;
 	z-index: -5;
+	overflow: hidden;
 }
 
 .fixed {
@@ -111,26 +112,34 @@ body, html, main {
 /***************************
 splash page
 ****************************/
+.contain {
+	text-align: center;
+}
+
+
 .splash-img {
-	width: 99%;
-	/*height: 100vh;*/
+
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .splash {
-	width: 80%;
+	display: inline-block;
 	margin-bottom: -1px;
 	overflow: hidden;
+	margin-left: 10px;
+    margin-right: 10px;
+    max-width: 600px;
 }
 
 .splash-img > img {
-	width: 102%;
+	max-width: 101%;
+	max-height: 75vh;
 	margin: 0 -2px;
 }
 
 .splash-top, .splash-bottom {
-    height: 24vh;
+    height: 17vh;
     border: none;
     width: 101%;
     margin: -5px -2px;
@@ -194,7 +203,7 @@ nav
 /***************************
 about me
 ****************************/
-.about-hdr {
+.aboutme > img {
 	display: none;
 }
 
@@ -206,6 +215,7 @@ about me
 
 .about-cont > img {
 	width: 35%;
+	max-width: 150px;
     border-radius: 50%;
     padding-top: 10px;
 }
@@ -213,6 +223,7 @@ about me
 .edgar-anima {
 	display: none;
 }
+
 
 
 
@@ -235,6 +246,7 @@ projects
 .project-cont {
 	height: 235px;
 	text-align: center;
+	border: 3px double;
 
 	.img {
 		display: inline-block;
@@ -251,7 +263,7 @@ projects
 
 .project-desc {
 	display: inline-block;
-	width: 60%;
+	width: 61%;
 	height: 100%;
 	position: relative;
     vertical-align: top;
@@ -270,7 +282,7 @@ projects
 .project-btn {
 	border-top: 1px solid white;
 	position: absolute;
-    bottom: -5px;
+    bottom: -7px;
     width: 100%;
 	a:nth-child(1) > img {
 		border-right: 1px solid white;	
@@ -402,7 +414,6 @@ contacts
 
 		.img {
 			width: 39%;
-			margin-right: 2px;
 		}
 	}
 
@@ -455,7 +466,17 @@ contacts
 	/***************************
 	about me
 	****************************/
+	.aboutme {
+		display: inline-block;
+	    width: 45%;
+	    float: right;
+	    margin-right: 10%;
+	}
 
+	.aboutme > img {
+		display: unset;
+		max-width: 700px;
+	}
 
 	.about-cont {
 		display: block;
