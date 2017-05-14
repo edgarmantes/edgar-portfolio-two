@@ -89,25 +89,25 @@ projects
   background-color: #000000;
 }
 .project1 > .project-cont > .img {
-  background-image: url(../images/scrum3.png);
+  background-image: url(../images/scrum3.PNG);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .project2 > .project-cont > .img {
-  background-image: url(../images/time4.png);
+  background-image: url(../images/time4.PNG);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .project3 > .project-cont > .img {
-  background-image: url(../images/LogRoom3.png);
+  background-image: url(../images/LogRoom3.PNG);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .project4 > .project-cont > .img {
-  background-image: url(../images/brew3.png);
+  background-image: url(../images/brew3.PNG);
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
