@@ -345,6 +345,12 @@ about me
 .edgar-anima {
   display: none;
 }
+.about-hdr {
+  margin: 0.5em 0;
+}
+.desc > p {
+  font-size: 14px;
+}
 /***************************
 projects
 ****************************/
@@ -473,6 +479,9 @@ contacts
   .about-cont > img {
     padding-top: 60px;
   }
+  .desc > p {
+    font-size: 22px;
+  }
   /***************************
 	projects
 	****************************/
@@ -543,7 +552,8 @@ contacts
   .about-cont .desc {
     display: inline-block;
     width: 45%;
-    padding: 70px;
+    /*padding: 70px;*/
+    margin: 0 12px;
   }
   .about-cont .desc .about-hdr {
     display: block;
@@ -553,7 +563,7 @@ contacts
   }
   .about-cont .desc .about-par {
     margin-bottom: 25px;
-    line-height: 1.7;
+    line-height: 1.4;
     /*animation: RL 2s;
 				animation-delay: 0.3s;*/
   }
@@ -588,40 +598,6 @@ contacts
     vertical-align: top;
     padding-left: 41px;
   }
-  .lakers {
-    /*opacity: 0;*/
-    /*animation: RL 1.5s;*/
-  }
-  .surfing {
-    /*opacity: 0;*/
-    margin-right: 126px;
-    /*animation: LR 1.5s;*/
-  }
-  .sky_diving {
-    /*opacity: 0;*/
-    margin-left: 67px;
-    /*animation: LR 1.5s;*/
-  }
-  .thailand {
-    /*opacity: 0;*/
-    margin-right: 15px;
-    /*animation: LR 1.5s;*/
-  }
-  .singapore {
-    /*opacity: 0;*/
-    margin-right: 84px;
-    /*animation: RL 1.5s;*/
-  }
-  .drawing {
-    /*opacity: 0;*/
-    margin-right: 23px;
-    /*animation: RL 1.5s;*/
-  }
-  .graphic_design {
-    /*opacity: 0;*/
-    margin-right: 70px;
-    /*animation: LR 1.5s;*/
-  }
   /***************************
 	projects
 	****************************/
@@ -653,7 +629,7 @@ contacts
   }
   .contact-sect ul > a > li {
     padding: 30px;
-    padding-left: 33%;
+    padding-left: 22%;
     border: none;
   }
   .contact-sect ul > a > li img {
@@ -737,7 +713,7 @@ contacts
 	****************************/
   .about-cont .desc {
     /*font-size: 24px;*/
-    line-height: 6vw;
+    line-height: 4vw;
   }
   /***************************
 	projects
@@ -828,6 +804,14 @@ contacts
 	****************************/
   .contacts-hdr {
     font-size: 3em;
+  }
+  .contact-sect ul > a > li {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .about-cont .desc .about-par {
+    line-height: 1.9;
   }
 }
 /****************************
