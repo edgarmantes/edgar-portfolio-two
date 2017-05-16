@@ -41,7 +41,7 @@ body, html, main {
 	height: 100%;
 	width: 100%;
 	z-index: -5;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .fixed {
@@ -252,14 +252,14 @@ projects
 }
 
 .project-cont {
-	height: 235px;
+	height: 435px;
 	text-align: center;
 	border: 3px double;
 
 	.img {
-		display: inline-block;
-    	width: 38%;
-    	height: 100%;
+		display: block;
+    	width: 100%;
+    	height: 50%;
 	}
 }
 
@@ -271,8 +271,8 @@ projects
 
 .project-desc {
 	display: inline-block;
-	width: 61%;
-	height: 100%;
+	width: 100%;
+	height: 50%;
 	position: relative;
     vertical-align: top;
 	p {
@@ -423,10 +423,19 @@ contacts
 	}
 
 	.project-cont {
+		height: 235px;
 
 		.img {
-			width: 39%;
+			display: inline-block;
+	    	width: 39%;
+	    	height: 100%;
 		}
+	}
+
+	.project-desc {
+		width: 61%;
+		height: 100%;
+
 	}
 
 	/***************************
