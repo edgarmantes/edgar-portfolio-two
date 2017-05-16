@@ -41,7 +41,7 @@ body, html, main {
 	height: 100%;
 	width: 100%;
 	z-index: -5;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .fixed {
@@ -224,6 +224,14 @@ about me
 	display: none;
 }
 
+.about-hdr {
+	margin:	0.5em 0;
+}
+
+.desc > p {
+	font-size: 14px;
+}
+
 
 
 
@@ -244,14 +252,14 @@ projects
 }
 
 .project-cont {
-	height: 235px;
+	height: 435px;
 	text-align: center;
 	border: 3px double;
 
 	.img {
-		display: inline-block;
-    	width: 38%;
-    	height: 100%;
+		display: block;
+    	width: 100%;
+    	height: 50%;
 	}
 }
 
@@ -263,8 +271,8 @@ projects
 
 .project-desc {
 	display: inline-block;
-	width: 61%;
-	height: 100%;
+	width: 100%;
+	height: 50%;
 	position: relative;
     vertical-align: top;
 	p {
@@ -389,6 +397,10 @@ contacts
 		padding-top: 60px;
 	}
 
+	.desc > p {
+		font-size: 22px;
+	}
+
 
 	/***************************
 	projects
@@ -411,10 +423,19 @@ contacts
 	}
 
 	.project-cont {
+		height: 235px;
 
 		.img {
-			width: 39%;
+			display: inline-block;
+	    	width: 39%;
+	    	height: 100%;
 		}
+	}
+
+	.project-desc {
+		width: 61%;
+		height: 100%;
+
 	}
 
 	/***************************
@@ -493,7 +514,8 @@ contacts
 		.desc {
 			display: inline-block;
 			width: 45%;
-			padding: 70px;
+			/*padding: 70px;*/
+			margin: 0 12px;
 
 			.about-hdr {
 				display: block;
@@ -505,7 +527,7 @@ contacts
 
 			.about-par {
 				margin-bottom: 25px;
-				line-height: 1.7;
+				line-height: 1.4;
 				/*animation: RL 2s;
 				animation-delay: 0.3s;*/
 				
@@ -554,46 +576,7 @@ contacts
     	padding-left: 41px;
 	}
 
-	.lakers {
-		/*opacity: 0;*/
-		/*animation: RL 1.5s;*/
-	}
 
-	.surfing {
-		/*opacity: 0;*/
-		margin-right: 126px;
-		/*animation: LR 1.5s;*/
-	}
-
-	.sky_diving {
-		/*opacity: 0;*/
-    	margin-left: 67px;
-    	/*animation: LR 1.5s;*/
-	}
-
-	.thailand {
-		/*opacity: 0;*/
-		margin-right: 15px;
-		/*animation: LR 1.5s;*/
-	}
-
-	.singapore {
-		/*opacity: 0;*/
-    	margin-right: 84px;
-    	/*animation: RL 1.5s;*/
-	}
-
-	.drawing {
-		/*opacity: 0;*/
-		margin-right: 23px;
-		/*animation: RL 1.5s;*/
-	}
-
-	.graphic_design {
-		/*opacity: 0;*/
-		margin-right: 70px;
-		/*animation: LR 1.5s;*/
-	}
 
 
 	/***************************
@@ -636,8 +619,9 @@ contacts
 
 		ul > a > li {
 		    padding: 30px;
-		    padding-left: 33%;
+		    padding-left: 22%;
 		    border: none;
+		    
 
 		    img {
 		    	width: 35px;
