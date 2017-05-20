@@ -206,6 +206,11 @@ nav
 /***************************
 about me
 ****************************/
+
+.about {
+	min-height: 100vh;
+}
+
 .aboutme > img {
 	display: none;
 }
@@ -214,6 +219,10 @@ about me
 	width: 80%;
     margin: 25px auto 0;
     line-height: 1.5;
+
+    .desc {
+    	padding-bottom: 60px;
+    }
 }
 
 .about-cont > img {
@@ -289,6 +298,10 @@ projects
 		word-wrap: break-word;
 		font-style: italic;
 	}
+
+	> h4 {
+    	padding-top: 25px;
+    }
 }
 
 .project-btn {
@@ -520,7 +533,7 @@ contacts
 		display: block;
 		width: 95%;
 		min-height: 100vh;
-		margin-top: 10vh;
+		margin-top: 13vh;
 
 		 
 		> img {
@@ -530,7 +543,6 @@ contacts
 		.desc {
 			display: inline-block;
 			width: 45%;
-			/*padding: 70px;*/
 			margin: 0 12px;
 
 			.about-hdr {
@@ -619,6 +631,13 @@ contacts
 			padding: 8px 21%;
 		}
 
+	}
+
+	.project-desc {
+
+		> h4 {
+	    	padding-top: 7px;
+	    }
 	}
 
 

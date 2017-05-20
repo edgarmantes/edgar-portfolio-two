@@ -342,6 +342,9 @@ nav
 /***************************
 about me
 ****************************/
+.about {
+  min-height: 100vh;
+}
 .aboutme > img {
   display: none;
 }
@@ -349,6 +352,9 @@ about me
   width: 80%;
   margin: 25px auto 0;
   line-height: 1.5;
+}
+.about-cont .desc {
+  padding-bottom: 60px;
 }
 .about-cont > img {
   width: 35%;
@@ -409,6 +415,9 @@ projects
   margin-top: 6px;
   word-wrap: break-word;
   font-style: italic;
+}
+.project-desc > h4 {
+  padding-top: 25px;
 }
 .project-btn {
   /*border-top: 1px solid white;*/
@@ -577,7 +586,7 @@ contacts
     display: block;
     width: 95%;
     min-height: 100vh;
-    margin-top: 10vh;
+    margin-top: 13vh;
   }
   .about-cont > img {
     display: none;
@@ -585,7 +594,6 @@ contacts
   .about-cont .desc {
     display: inline-block;
     width: 45%;
-    /*padding: 70px;*/
     margin: 0 12px;
   }
   .about-cont .desc .about-hdr {
@@ -651,6 +659,9 @@ contacts
   .project-btn img {
     padding: 8px 21%;
   }
+  .project-desc > h4 {
+    padding-top: 7px;
+  }
   /***************************
 	contacts
 	****************************/
@@ -708,6 +719,7 @@ projects
 ****************************/
 .project-hdr {
   text-align: center;
+  color: #3c9b40;
 }
 .project-desc {
   color: #000000;
@@ -747,7 +759,7 @@ contacts
 	****************************/
   .about-cont .desc {
     /*font-size: 24px;*/
-    line-height: 4vw;
+    line-height: 5vw;
   }
   /***************************
 	projects
@@ -801,34 +813,6 @@ contacts
   }
   .about-quote > strong {
     color: #3c9b40;
-  }
-  .lakers {
-    font-size: 38px;
-    color: #37bf3c;
-  }
-  .surfing {
-    font-size: 46px;
-  }
-  .sky_diving {
-    font-size: 61px;
-    text-align: left;
-    color: #34a838;
-  }
-  .thailand {
-    font-size: 65px;
-    color: #34a838;
-  }
-  .singapore {
-    font-size: 35px;
-    text-align: center;
-    color: #37bf3c;
-  }
-  .drawing {
-    font-size: 38px;
-  }
-  .graphic_design {
-    font-size: 40px;
-    color: #34a838;
   }
   /***************************
 	projects
