@@ -8,7 +8,7 @@ html {
 splash page
 ****************************/
 .splash {
-  background-image: url(../images/beach1.png);
+  background-image: url(../images/beach1.jpg);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -57,10 +57,6 @@ nav
 ****************************/
 .nav {
   background: white;
-  background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-  background: -o-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-  background: -moz-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-  background: linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 }
 /***************************
 about me
@@ -73,9 +69,9 @@ projects
 ****************************/
 .projects {
   background-color: lightgray;
-  background-image: url(../images/beach3.png);
+  background-image: url(../images/beach3.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-repeat: no-repeat;
   background-position: center ;
   width: 100%;
@@ -85,7 +81,9 @@ projects
   background-color: white;
 }
 .project-desc {
-  background-color: #000000;
+  background-color: #d9d9d9;
+  background-image: url(../images/arrow-down.png);
+  background-repeat: repeat-x;
 }
 .project1 > .project-cont > .img {
   background-image: url(../images/scrum3.PNG);
@@ -131,6 +129,10 @@ about me
   /***************************
 projects
 ****************************/
+  .project-desc {
+    background-image: url(../images/arrow-right.png);
+    background-repeat: repeat-y;
+  }
   /***************************
 contacts
 ****************************/
@@ -143,6 +145,13 @@ contacts
   /***************************
 	nav
 	****************************/
+  .nav {
+    background: white;
+    background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background: -o-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background: -moz-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background: linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  }
   /***************************
 	about me
 	****************************/
@@ -152,6 +161,9 @@ contacts
   /***************************
 	projects
 	****************************/
+  .projects {
+    background-attachment: fixed;
+  }
   /***************************
 	contacts
 	****************************/
@@ -182,7 +194,7 @@ main {
   /*width: 100vw;*/
 }
 .wrapper {
-  height: 92vh;
+  height: 100vh;
 }
 .wrappers {
   height: 101vh;
@@ -277,7 +289,7 @@ splash page
 }
 .splash-top,
 .splash-bottom {
-  height: 17vh;
+  height: 26vh;
   border: none;
   width: 101%;
   margin: -5px -2px;
@@ -298,6 +310,9 @@ splash page
 nav
 ****************************/
 .nav {
+  /*	position: fixed;
+    top: 0;*/
+  display: none;
   width: 100%;
   height: 8vh;
   z-index: 10;
@@ -367,7 +382,6 @@ projects
 .project-cont {
   height: 435px;
   text-align: center;
-  border: 3px double;
 }
 .project-cont .img {
   display: block;
@@ -385,9 +399,10 @@ projects
   height: 50%;
   position: relative;
   vertical-align: top;
+  padding-top: 15px;
 }
 .project-desc p {
-  padding: 1em;
+  padding: 0 1em;
 }
 .project-desc p > span {
   display: block;
@@ -396,16 +411,16 @@ projects
   font-style: italic;
 }
 .project-btn {
-  border-top: 1px solid white;
+  /*border-top: 1px solid white;*/
   position: absolute;
-  bottom: -7px;
+  bottom: -6px;
   width: 100%;
 }
 .project-btn a:nth-child(1) > img {
-  border-right: 1px solid white;
+  border-right: 1px solid black;
 }
 .project-btn img {
-  padding: 5px 16%;
+  padding: 8px 16%;
 }
 .project1 {
   animation: RL 2s;
@@ -423,6 +438,9 @@ projects
 /***************************
 contacts
 ****************************/
+.contact {
+  height: unset;
+}
 .contacts-hdr {
   margin-bottom: 25px;
 }
@@ -466,7 +484,7 @@ contacts
 	nav
 	****************************/
   .nav ul {
-    padding: 2rem;
+    padding: 1rem;
   }
   .nav ul > li {
     padding: 0 25px;
@@ -521,12 +539,18 @@ contacts
 }
 /****Desktop View*****/
 @media only screen and (min-width: 1000px) {
+  .wrapper {
+    height: 92vh;
+  }
   /***************************
 	splash page
 	****************************/
   /***************************
 	nav
 	****************************/
+  .nav {
+    display: block;
+  }
   .nav ul > li {
     padding: 0 60px;
   }
@@ -552,6 +576,7 @@ contacts
   .about-cont {
     display: block;
     width: 95%;
+    min-height: 100vh;
     margin-top: 10vh;
   }
   .about-cont > img {
@@ -578,6 +603,7 @@ contacts
   .about-cont .desc .about-quote {
     /*animation: RL 2s;
 				animation-delay: 0.5s;*/
+    padding-bottom: 30px;
   }
   .animation {
     width: 100%;
@@ -684,16 +710,16 @@ projects
   text-align: center;
 }
 .project-desc {
-  color: #ffffff;
+  color: #000000;
   font-size: 14.1px;
 }
-.project-desc p > span {
+.project-desc p {
   display: block;
   margin-top: 6px;
   word-wrap: break-word;
   font-style: italic;
 }
-.project-desc p > span > strong {
+.project-desc p > strong {
   color: #50a96e;
 }
 /***************************
@@ -730,7 +756,7 @@ contacts
     font-size: 4em;
   }
   .project-desc {
-    font-size: 19px;
+    font-size: 16px;
     line-height: 1.4;
   }
   /***************************
