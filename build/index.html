@@ -26,7 +26,7 @@
                     <div class="splash-bottom"></div>
                 </div>
             </div
-            ><div id="about" class="wrappers about">
+            ><div id="about" class="about">
                 <div class="nav-wrap">
                     <div class="nav">
                         <ul>
@@ -84,11 +84,11 @@
                 >
                     <div class="project-cont">
                         <div class="img">
-                            <!-- <img class="project-img" src="./images/scrum2.png" alt="Scrum-mage"> -->
                         </div><div class="project-desc">
-                            <p>Get organized and be more productive using the Scrum-mage app. Get to work on this Scrum framework.
-                            <span class="p-roles"><strong>Role:</strong> Designer/Coder
-                            <strong>Tech:</strong> React/Redux/Node/Passport/MongoDB/Mongoose</span>
+                            <h4 class="hdr-scrum">Scrummage</h4>
+                            <p>Get organized and be more productive using the Scrum-mage app. Get to work on this Scrum framework.</p>
+                            <p class="p-roles"><strong>Role:</strong> Designer/Coder</p>
+                            <p class="p-tech"><strong>Tech:</strong> React/Redux/Node/Passport/MongoDB/Mongoose
                             </p>
                             <div class="project-btn">
                                 <a href="https://github.com/shootermantes/Scrum-magin-" target="_blank"><img src="./images/github.png"><p class="visuallyhidden">project github source code</p></a
@@ -106,12 +106,11 @@
                 >
                     <div class="project-cont">
                         <div class="img">
-                            <!-- <img class="project-img" src="./images/timetracker.png" alt="Time Tracker">  -->
                         </div><div class="project-desc">
-                            <p>Track the time to complete your project. No more guessing, track your time using this app.
-                            <span class=""><strong>Role:</strong> Designer/Coder
-                            <strong>Tech:</strong> React/Redux/Node/Passport/MongoDB/Mongoose</span>
-                            </p>
+                            <h4 class="hdr-timetracker">Time Tracker</h4>
+                            <p>Track the time to complete your project. No more guessing, track your time using this app.</p>
+                            <p class="p-roles"><strong>Role:</strong> Designer/Coder</p>
+                            <p class="p-tech"><strong>Tech:</strong> React/Redux/Node/Passport/MongoDB/Mongoose</p>
                             <div class="project-btn">
                                 <a href="https://github.com/shootermantes/react-redux-timer" target="_blank"><img src="./images/github.png"><p class="visuallyhidden">project github source code</p></a
                                 ><a href="https://agile-plateau-82595.herokuapp.com/#/" target="_blank"><img src="./images/web2.png"><p class="visuallyhidden">project website</p></a>
@@ -128,12 +127,11 @@
                 >
                     <div class="project-cont">
                         <div class="img">
-                            <!-- <img class="project-img" src="./images/logroom.png" alt="Log Room"> -->
                         </div><div class="project-desc">
-                            <p>Get your team organized and keep the communcation clear within the team. LogRoom will help you do exactly that.
-                            <span class=""><strong>Role:</strong> Designer/Coder
-                            <strong>Tech:</strong> jQuery/Mocha/Chia/MongoDB/Mongoose</span>
-                            </p>
+                        <h4 class="hdr-logroom">Log Room</h4>
+                            <p>Get your team organized and keep the communcation clear within the team. LogRoom will help you do exactly that.</p>
+                            <p class="p-roles"><strong>Role:</strong> Designer/Coder</p>
+                            <p class="p-tech"><strong>Tech:</strong> jQuery/Mocha/Chia/MongoDB/Mongoose</p>
                             <div class="project-btn">
                                 <a href="https://github.com/shootermantes/LogRoom" target="_blank"><img src="./images/github.png"><p class="visuallyhidden">project github source code</p></a
                                 ><a href="https://ancient-beyond-11469.herokuapp.com/" target="_blank"><img src="./images/web2.png"><p class="visuallyhidden">project website</p></a>
@@ -150,13 +148,12 @@
                 >
                     <div class="project-cont">
                         <div class="img">
-                            <!-- <img class="project-img" src="./images/brew3.png" alt="Map My Brewery">  -->
                         </div
                         ><div class="project-desc">
-                            <p>Check out the breweries around you and your friends. Don't miss out on one sip.
-                            <span class=""><strong>Role:</strong> Designer/Coder
-                            <strong>Tech:</strong> ES6/Webpack/LESS/Babel</span>
-                            </p>
+                        <h4 class="hdr-brew">Map My Brewery</h4>
+                            <p>Check out the breweries around you and your friends. Don't miss out on one sip.</p>
+                            <p class="p-roles"><strong>Role:</strong> Designer/Coder</p>
+                            <p class="p-tech"><strong>Tech:</strong> ES6/Webpack/LESS/Babel</p>
                             <div class="project-btn">
                                 <a href="https://github.com/shootermantes/react-redux-timer" target="_blank"><img src="./images/github.png"><p class="visuallyhidden">project github source code</p></a
                                 ><a href="https://agile-plateau-82595.herokuapp.com/#/" target="_blank"><img src="./images/web2.png"><p class="visuallyhidden">project website</p></a>
@@ -195,6 +192,7 @@
             </div>
         </div>
         <script type="text/javascript" src="./build/edgarportfolioAPR2017.1.0.0.js"></script>
+
         <script type="text/javascript" src="js/skrollr.min.js"></script>
         <script type="text/javascript">
             var s = skrollr.init(
@@ -203,7 +201,7 @@
             );
 
 
-            s.refresh($('.homeSlide'));
+            s.refresh(document.getElementsByClassName('.homeSlide')[0]);
 
         </script>
     </body>
