@@ -405,7 +405,7 @@ projects
   height: 50%;
   position: relative;
   vertical-align: top;
-  padding-top: 15px;
+  /*padding-top: 15px;*/
 }
 .project-desc p {
   padding: 0 1em;
@@ -430,6 +430,7 @@ projects
 }
 .project-btn img {
   padding: 8px 16%;
+  height: 100%;
 }
 .project1 {
   animation: RL 2s;
