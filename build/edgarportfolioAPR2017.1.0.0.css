@@ -28,6 +28,13 @@ splash page
   background-color: white;
   z-index: -1;
 }
+.fullstack {
+  background: url(../images/beach1.jpg) no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-clip: text;
+}
 @keyframes fadeInBack {
   0% {
     transform: translate(0, 0, 0);
@@ -267,8 +274,59 @@ main {
 /***************************
 splash page
 ****************************/
+.header-item {
+  display: block;
+  width: 90%;
+  max-width: 576px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10vh;
+}
+.first-name {
+  font-size: 8vw;
+  margin-top: 0;
+  margin-bottom: -18px;
+}
+.fullstack {
+  font-size: 4.85vw;
+  display: inline-block;
+  -webkit-transform: scale(1, 2.5);
+  /* Safari and Chrome */
+  -moz-transform: scale(1, 2.5);
+  /* Firefox */
+  -ms-transform: scale(1, 2.5);
+  /* IE 9 */
+  -o-transform: scale(1, 2.5);
+  /* Opera */
+  transform: scale(1, 2.5);
+  /* W3C */
+}
+.developer {
+  display: inline-block;
+  -webkit-transform: scale(1, 0.5);
+  /*Safari and Chrome */
+  -moz-transform: scale(1, 0.5);
+  /* Firefox */
+  -ms-transform: scale(1, 0.5);
+  /* IE 9 */
+  -o-transform: scale(1, 0.5);
+  /* Opera */
+  transform: scale(1, 0.5);
+  /* W3C */
+  border-bottom: 10px solid #2f7a32;
+  padding-bottom: 7px;
+  margin-bottom: -18px;
+}
+.list-frontend {
+  width: 101%;
+}
+.list-backend {
+  display: inline-block;
+  width: 101%;
+}
 .contain {
   text-align: center;
+  min-height: 92vh;
 }
 .splash-img {
   margin-left: auto;
@@ -699,6 +757,41 @@ contacts
 /***************************
 splash page
 ****************************/
+.header-item {
+  font-family: 'Anton', sans-serif;
+}
+.first-name {
+  font-size: 30.6vw;
+  line-height: 0.75;
+  color: #34a838;
+}
+.last-name {
+  font-size: 24vw;
+  color: #2f7a32;
+  /*margin-bottom: -13px;*/
+}
+.fullstack {
+  font-size: 18.12vw;
+  color: green;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.6;
+}
+.developer {
+  font-size: 17.82vw;
+  color: #2f7a32;
+  line-height: 1.2;
+}
+.list-frontend {
+  font-size: 3.4vw;
+  color: #34a838;
+  line-height: 1;
+  word-spacing: 0.1vw;
+}
+.list-backend {
+  font-size: 3.3vw;
+  color: #34a838;
+  word-spacing: 0.01vw;
+}
 /***************************
 nav
 ****************************/
@@ -749,6 +842,27 @@ contacts
   /***************************
 	splash page
 	****************************/
+  .header-item {
+    padding-bottom: 50px;
+  }
+  .first-name {
+    font-size: 197px;
+  }
+  .last-name {
+    font-size: 154px;
+  }
+  .fullstack {
+    font-size: 117px;
+  }
+  .developer {
+    font-size: 115px;
+  }
+  .list-frontend {
+    font-size: 22px;
+  }
+  .list-backend {
+    font-size: 21.5px;
+  }
   /***************************
 	nav
 	****************************/
