@@ -109,7 +109,13 @@ $(document).ready( () => {
 
 
 
+    var s = skrollr.init(
+        // smoothScrolling=true;
+        // skrollrBody='skrollr-body';
+    );
 
+
+    s.refresh(document.getElementsByClassName('.homeSlide')[0]);
 	
 
 });
