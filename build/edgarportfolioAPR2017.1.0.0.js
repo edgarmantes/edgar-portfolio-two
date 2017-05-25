@@ -144,6 +144,10 @@
 		(0, _jquery2.default)('.js-contacts').on('click', function () {
 			initScroll('contacts');
 		});
+	
+		var s = skrollr.init();
+	
+		s.refresh(document.getElementsByClassName('.homeSlide')[0]);
 	});
 
 /***/ }),
