@@ -285,7 +285,7 @@ splash page
 .first-name {
   font-size: 8vw;
   margin-top: 0;
-  margin-bottom: -18px;
+  /*margin-bottom: -18px;*/
 }
 .fullstack {
   font-size: 4.85vw;
@@ -300,6 +300,7 @@ splash page
   /* Opera */
   transform: scale(1, 2.5);
   /* W3C */
+  margin: 12vw 0 6vw 0;
 }
 .developer {
   display: inline-block;
@@ -548,6 +549,9 @@ contacts
   .splash-top {
     height: 17vh;
   }
+  .fullstack {
+    margin: 78px 0 35px 0;
+  }
   /***************************
 	nav
 	****************************/
@@ -762,11 +766,12 @@ splash page
 }
 .first-name {
   font-size: 30.6vw;
-  line-height: 0.75;
+  line-height: 1;
   color: #34a838;
 }
 .last-name {
   font-size: 24vw;
+  line-height: 1;
   color: #2f7a32;
   /*margin-bottom: -13px;*/
 }
@@ -774,7 +779,7 @@ splash page
   font-size: 18.12vw;
   color: green;
   -webkit-text-fill-color: transparent;
-  line-height: 1.6;
+  line-height: 1;
 }
 .developer {
   font-size: 17.82vw;
@@ -786,6 +791,7 @@ splash page
   color: #34a838;
   line-height: 1;
   word-spacing: 0.1vw;
+  margin-top: 5px;
 }
 .list-backend {
   font-size: 3.3vw;
