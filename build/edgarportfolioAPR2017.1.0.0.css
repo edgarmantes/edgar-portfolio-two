@@ -843,6 +843,9 @@ contacts
 .contact-sect ul > a > li {
   color: #3c9b40;
 }
+.contact-sect ul > a > li {
+  font-size: 14px;
+}
 /****iPad View*****/
 @media only screen and (min-width: 640px) {
   /***************************
@@ -945,7 +948,7 @@ contacts
     font-size: 3em;
   }
   .contact-sect ul > a > li {
-    font-size: 18px;
+    font-size: 21px;
   }
 }
 @media only screen and (min-width: 1450px) {
