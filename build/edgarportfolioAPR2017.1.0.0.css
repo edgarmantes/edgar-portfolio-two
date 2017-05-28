@@ -443,6 +443,7 @@ projects
   height: 25%;
   width: 90%;
   margin: 20px auto;
+  /*opacity: 1 !important;*/
 }
 .project-cont {
   height: 435px;
@@ -676,26 +677,6 @@ contacts
 				animation-delay: 0.5s;*/
     padding-bottom: 30px;
   }
-  .animation {
-    width: 100%;
-    text-align: right;
-    max-width: 700px;
-    float: right;
-  }
-  .animation .basketball {
-    /*opacity: 0;*/
-    /*animation: LR 2s;*/
-    text-align: left;
-  }
-  .animation .traveling {
-    /*animation: LR 2s;
-			animation-delay: 0.3s;*/
-    margin-right: 10%;
-  }
-  .animation .art {
-    /*animation: LR 2s;
-			animation-delay: 0.5s*/
-  }
   .edgar-anima {
     display: inline-block;
     width: 56%;
@@ -718,6 +699,7 @@ contacts
     display: inline-block;
     margin: 27px;
     vertical-align: top;
+    /*opacity: unset;*/
   }
   .project-btn img {
     padding: 8px 21%;
