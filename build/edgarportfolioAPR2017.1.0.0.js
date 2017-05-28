@@ -145,9 +145,12 @@
 			initScroll('contacts');
 		});
 	
-		var s = skrollr.init();
+		if ((0, _jquery2.default)(window).width() > 1000) {
+			console.log((0, _jquery2.default)(window).width());
+			var s = skrollr.init();
 	
-		s.refresh(document.getElementsByClassName('.homeSlide')[0]);
+			s.refresh(document.getElementsByClassName('.homeSlide')[0]);
+		}
 	});
 
 /***/ }),

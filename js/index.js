@@ -108,15 +108,16 @@ $(document).ready( () => {
 	});	
 
 
+	if ($(window).width() > 1000) {
+		console.log($(window).width())
+	    var s = skrollr.init(
+	        // smoothScrolling=true;
+	        // skrollrBody='skrollr-body';
+	    );
 
-    var s = skrollr.init(
-        // smoothScrolling=true;
-        // skrollrBody='skrollr-body';
-    );
 
-
-    s.refresh(document.getElementsByClassName('.homeSlide')[0]);
-	
+	    s.refresh(document.getElementsByClassName('.homeSlide')[0]);
+	}	
 
 });
  
