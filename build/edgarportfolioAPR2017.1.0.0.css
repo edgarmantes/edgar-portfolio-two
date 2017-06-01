@@ -168,9 +168,6 @@ contacts
   /***************************
 	projects
 	****************************/
-  .projects {
-    background-attachment: fixed;
-  }
   /***************************
 	contacts
 	****************************/
@@ -364,6 +361,9 @@ splash page
   height: 92vh;
   left: 0;
   z-index: -1;
+}
+.list-backend {
+  padding-bottom: 20px;
 }
 /***************************
 nav
@@ -707,6 +707,14 @@ contacts
   .project-desc > h4 {
     padding-top: 7px;
   }
+  .project-desc > h4.hdr-logroom {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  .project-desc > h4.hdr-brew {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
   /***************************
 	contacts
 	****************************/
@@ -769,29 +777,39 @@ splash page
   line-height: 1.2;
 }
 .list-frontend {
-  font-size: 3.4vw;
+  font-size: 2.65vw;
   color: #34a838;
   line-height: 1;
   word-spacing: 0.1vw;
   margin-top: 5px;
+  font-family: 'EB Garamond', serif;
 }
 .list-backend {
-  font-size: 3.3vw;
+  font-size: 2.55vw;
   color: #34a838;
   word-spacing: 0.01vw;
+  font-family: 'EB Garamond', serif;
 }
 /***************************
 nav
 ****************************/
 .nav ul > li {
   color: rgba(0, 0, 0, 0.7);
+  font-family: 'EB Garamond', serif;
 }
 /***************************
 about me
 ****************************/
+.about-hdr {
+  font-family: 'Anton', sans-serif;
+}
 .about-cont {
   /*line-height: 1.8;*/
   text-align: center;
+}
+.about-par,
+.about-quote {
+  font-family: 'EB Garamond', serif;
 }
 .about-quote {
   font-style: italic;
@@ -802,10 +820,15 @@ projects
 .project-hdr {
   text-align: center;
   color: #3c9b40;
+  font-family: 'Anton', sans-serif;
 }
 .project-desc {
   color: #000000;
   font-size: 14.1px;
+  font-family: 'EB Garamond', serif;
+}
+.project-desc h4 {
+  font-size: 22px;
 }
 .project-desc p {
   display: block;
@@ -827,6 +850,10 @@ contacts
 }
 .contact-sect ul > a > li {
   font-size: 14px;
+  font-family: 'EB Garamond', serif;
+}
+.contacts-hdr {
+  font-family: 'Anton', sans-serif;
 }
 /****iPad View*****/
 @media only screen and (min-width: 640px) {
@@ -849,10 +876,10 @@ contacts
     font-size: 115px;
   }
   .list-frontend {
-    font-size: 22px;
+    font-size: 17px;
   }
   .list-backend {
-    font-size: 21.5px;
+    font-size: 16.5px;
   }
   /***************************
 	nav
