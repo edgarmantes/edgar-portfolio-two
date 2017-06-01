@@ -5,6 +5,8 @@
 @Bowlby: 'Bowlby One', cursive;
 @Anton: 'Anton', sans-serif;
 
+@Garamond: 'EB Garamond', serif;
+
 /***************************
 splash page
 ****************************/
@@ -39,17 +41,19 @@ splash page
 }
 
 .list-frontend {
-	font-size: 3.4vw;
+	font-size: 2.65vw;
 	color: @greenTwo;
 	line-height: 1;
 	word-spacing: 0.1vw;
 	margin-top: 5px;
+	font-family: @Garamond;
 }
 
 .list-backend {
-	font-size: 3.3vw;
+	font-size: 2.55vw;
 	color: @greenTwo;
 	word-spacing: 0.01vw;
+	font-family: @Garamond;
 }
 
 /***************************
@@ -57,16 +61,25 @@ nav
 ****************************/
 .nav ul > li {
 	color: rgba(0,0,0,0.7);
+	font-family: @Garamond;
 }
 
 /***************************
 about me
 ****************************/
 
+.about-hdr {
+	font-family: @Anton;
+}
+
 .about-cont {
 	/*line-height: 1.8;*/
 	text-align: center;
 
+}
+
+.about-par, .about-quote {
+	font-family: @Garamond;
 }
 
 .about-quote {
@@ -83,12 +96,18 @@ projects
 .project-hdr {
 	text-align: center;
 	color: rgb(60,155,64);
+	font-family: @Anton;
 }
 
 .project-desc {
 
 	color: rgb(0,0,0);
 	font-size: 14.1px;	
+	font-family: @Garamond;
+
+	h4 {
+		font-size: 22px;
+	}
 
 	p  {
 		display: block;
@@ -118,7 +137,12 @@ contacts
 
 	ul > a > li {
 	    font-size: 14px;
+	    font-family: @Garamond;
 	}
+}
+
+.contacts-hdr {
+	font-family: @Anton;
 }
 
 
@@ -151,11 +175,11 @@ contacts
 	}
 
 	.list-frontend {
-		font-size: 22px;
+		font-size: 17px;
 	}
 
 	.list-backend {
-		font-size: 21.5px; 
+		font-size: 16.5px; 
 	}
 
 	/***************************
