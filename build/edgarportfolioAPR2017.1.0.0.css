@@ -535,6 +535,7 @@ contacts
 .contact-sect ul > a > li > img {
   vertical-align: middle;
   margin-right: 15px;
+  width: 30px;
 }
 /****iPad View*****/
 @media only screen and (min-width: 640px) {
