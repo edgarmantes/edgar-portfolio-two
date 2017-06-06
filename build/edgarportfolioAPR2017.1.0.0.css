@@ -731,7 +731,7 @@ contacts
     border: none;
   }
   .contact-sect ul > a > li img {
-    width: 35px;
+    width: 30px;
     margin-right: 28px;
   }
   .contact-sect ul > a:nth-child(3) > li {
@@ -834,7 +834,6 @@ projects
   display: block;
   margin-top: 6px;
   word-wrap: break-word;
-  font-style: italic;
 }
 .project-desc p > strong {
   color: #50a96e;
