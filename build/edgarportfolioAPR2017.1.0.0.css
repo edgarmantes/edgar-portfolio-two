@@ -8,13 +8,12 @@ html {
 splash page
 ****************************/
 .splash {
-  background-image: url(../images/beach1.png);
+  background-image: url(../images/beach1.jpg);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  width: 98%;
   content: '';
 }
 .splash-img {
@@ -23,10 +22,18 @@ splash page
 .splash-top,
 .splash-bottom {
   background-color: white;
+  margin-top: -5px;
 }
 .white {
   background-color: white;
   z-index: -1;
+}
+.fullstack {
+  background: url(../images/beach1.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-clip: text;
 }
 @keyframes fadeInBack {
   0% {
@@ -57,10 +64,6 @@ nav
 ****************************/
 .nav {
   background: white;
-  background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0));
-  background: -o-linear-gradient(white, rgba(255, 255, 255, 0));
-  background: -moz-linear-gradient(white, rgba(255, 255, 255, 0));
-  background: linear-gradient(white, rgba(255, 255, 255, 0));
 }
 /***************************
 about me
@@ -73,12 +76,11 @@ projects
 ****************************/
 .projects {
   background-color: lightgray;
-  background-image: url(../images/beach3.png);
+  background-image: url(../images/beach3.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-repeat: no-repeat;
   background-position: center ;
-  /*height: 100%;*/
   width: 100%;
   content: 'This ';
 }
@@ -86,7 +88,33 @@ projects
   background-color: white;
 }
 .project-desc {
-  background-color: #000000;
+  background-color: #d9d9d9;
+  background-image: url(../images/arrow-down.png);
+  background-repeat: repeat-x;
+}
+.project1 > .project-cont > .img {
+  background-image: url(../images/scrum3.PNG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project2 > .project-cont > .img {
+  background-image: url(../images/time4.PNG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project3 > .project-cont > .img {
+  background-image: url(../images/LogRoom3.PNG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project4 > .project-cont > .img {
+  background-image: url(../images/brew3.PNG);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
 }
 /***************************
 contacts
@@ -108,6 +136,10 @@ about me
   /***************************
 projects
 ****************************/
+  .project-desc {
+    background-image: url(../images/arrow-right.png);
+    background-repeat: repeat-y;
+  }
   /***************************
 contacts
 ****************************/
@@ -120,15 +152,18 @@ contacts
   /***************************
 	nav
 	****************************/
+  .nav {
+    background: white;
+    background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background: -o-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background: -moz-linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background: linear-gradient(white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  }
   /***************************
 	about me
 	****************************/
   .about {
     background-color: #d9d9d9;
-    background-image: url(../images/edgar.png);
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position: center center;
   }
   /***************************
 	projects
@@ -163,7 +198,7 @@ main {
   /*width: 100vw;*/
 }
 .wrapper {
-  height: 92vh;
+  height: 100vh;
 }
 .wrappers {
   height: 101vh;
@@ -173,6 +208,7 @@ main {
   height: 100%;
   width: 100%;
   z-index: -5;
+  /*overflow: hidden;*/
 }
 .fixed {
   position: fixed;
@@ -235,24 +271,81 @@ main {
 /***************************
 splash page
 ****************************/
+.header-item {
+  display: block;
+  width: 90%;
+  max-width: 576px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10vh;
+}
+.first-name {
+  font-size: 8vw;
+  margin-top: 0;
+  /*margin-bottom: -18px;*/
+}
+.fullstack {
+  font-size: 4.85vw;
+  display: inline-block;
+  -webkit-transform: scale(1, 2.5);
+  /* Safari and Chrome */
+  -moz-transform: scale(1, 2.5);
+  /* Firefox */
+  -ms-transform: scale(1, 2.5);
+  /* IE 9 */
+  -o-transform: scale(1, 2.5);
+  /* Opera */
+  transform: scale(1, 2.5);
+  /* W3C */
+  margin: 12vw 0 6vw 0;
+}
+.developer {
+  display: inline-block;
+  -webkit-transform: scale(1, 0.5);
+  /*Safari and Chrome */
+  -moz-transform: scale(1, 0.5);
+  /* Firefox */
+  -ms-transform: scale(1, 0.5);
+  /* IE 9 */
+  -o-transform: scale(1, 0.5);
+  /* Opera */
+  transform: scale(1, 0.5);
+  /* W3C */
+  border-bottom: 10px solid #2f7a32;
+  padding-bottom: 7px;
+  margin-bottom: -18px;
+}
+.list-frontend {
+  width: 101%;
+}
+.list-backend {
+  display: inline-block;
+  width: 101%;
+}
+.contain {
+  text-align: center;
+  min-height: 92vh;
+}
 .splash-img {
-  width: 99%;
-  /*height: 100vh;*/
   margin-left: auto;
   margin-right: auto;
 }
 .splash {
-  width: 80%;
+  display: inline-block;
   margin-bottom: -1px;
   overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 600px;
 }
 .splash-img > img {
-  width: 102%;
-  margin: 0 -1px;
+  max-width: 101%;
+  max-height: 75vh;
+  margin: 0 -2px;
 }
 .splash-top,
 .splash-bottom {
-  height: 24vh;
+  height: 26vh;
   border: none;
   width: 101%;
   margin: -5px -2px;
@@ -269,10 +362,16 @@ splash page
   left: 0;
   z-index: -1;
 }
+.list-backend {
+  padding-bottom: 20px;
+}
 /***************************
 nav
 ****************************/
 .nav {
+  /*	position: fixed;
+    top: 0;*/
+  display: none;
   width: 100%;
   height: 8vh;
   z-index: 10;
@@ -302,7 +401,10 @@ nav
 /***************************
 about me
 ****************************/
-.about-hdr {
+.about {
+  min-height: 100vh;
+}
+.aboutme > img {
   display: none;
 }
 .about-cont {
@@ -310,13 +412,23 @@ about me
   margin: 25px auto 0;
   line-height: 1.5;
 }
+.about-cont .desc {
+  padding-bottom: 60px;
+}
 .about-cont > img {
   width: 35%;
+  max-width: 150px;
   border-radius: 50%;
   padding-top: 10px;
 }
 .edgar-anima {
   display: none;
+}
+.about-hdr {
+  margin: 0.5em 0;
+}
+.desc > p {
+  font-size: 14px;
 }
 /***************************
 projects
@@ -331,15 +443,16 @@ projects
   height: 25%;
   width: 90%;
   margin: 20px auto;
+  /*opacity: 1 !important;*/
 }
 .project-cont {
-  height: 235px;
+  height: 435px;
   text-align: center;
 }
 .project-cont .img {
-  display: inline-block;
-  width: 38%;
-  height: 100%;
+  display: block;
+  width: 100%;
+  height: 50%;
 }
 .project-img {
   display: inline-block;
@@ -348,13 +461,14 @@ projects
 }
 .project-desc {
   display: inline-block;
-  width: 60%;
-  height: 100%;
+  width: 100%;
+  height: 50%;
   position: relative;
   vertical-align: top;
+  /*padding-top: 15px;*/
 }
 .project-desc p {
-  padding: 1em;
+  padding: 0 1em;
 }
 .project-desc p > span {
   display: block;
@@ -362,17 +476,21 @@ projects
   word-wrap: break-word;
   font-style: italic;
 }
+.project-desc > h4 {
+  padding-top: 25px;
+}
 .project-btn {
-  border-top: 1px solid white;
+  /*border-top: 1px solid white;*/
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   width: 100%;
 }
 .project-btn a:nth-child(1) > img {
-  border-right: 1px solid white;
+  border-right: 1px solid black;
 }
 .project-btn img {
-  padding: 5px 16%;
+  padding: 8px 16%;
+  height: 100%;
 }
 .project1 {
   animation: RL 2s;
@@ -390,6 +508,9 @@ projects
 /***************************
 contacts
 ****************************/
+.contact {
+  height: unset;
+}
 .contacts-hdr {
   margin-bottom: 25px;
 }
@@ -414,6 +535,7 @@ contacts
 .contact-sect ul > a > li > img {
   vertical-align: middle;
   margin-right: 15px;
+  width: 30px;
 }
 /****iPad View*****/
 @media only screen and (min-width: 640px) {
@@ -429,11 +551,14 @@ contacts
   .splash-top {
     height: 17vh;
   }
+  .fullstack {
+    margin: 78px 0 35px 0;
+  }
   /***************************
 	nav
 	****************************/
   .nav ul {
-    padding: 2rem;
+    padding: 1rem;
   }
   .nav ul > li {
     padding: 0 25px;
@@ -444,6 +569,9 @@ contacts
 	****************************/
   .about-cont > img {
     padding-top: 60px;
+  }
+  .desc > p {
+    font-size: 22px;
   }
   /***************************
 	projects
@@ -458,9 +586,17 @@ contacts
     width: 124px;
     max-width: unset;
   }
+  .project-cont {
+    height: 235px;
+  }
   .project-cont .img {
+    display: inline-block;
     width: 39%;
-    margin-right: 2px;
+    height: 100%;
+  }
+  .project-desc {
+    width: 61%;
+    height: 100%;
   }
   /***************************
 	contacts
@@ -477,12 +613,18 @@ contacts
 }
 /****Desktop View*****/
 @media only screen and (min-width: 1000px) {
+  .wrapper {
+    height: 92vh;
+  }
   /***************************
 	splash page
 	****************************/
   /***************************
 	nav
 	****************************/
+  .nav {
+    display: block;
+  }
   .nav ul > li {
     padding: 0 60px;
   }
@@ -492,18 +634,32 @@ contacts
   /***************************
 	about me
 	****************************/
+  .aboutme {
+    display: inline-block;
+    width: 45%;
+    float: right;
+    margin-right: 7%;
+    margin-top: 6vh;
+  }
+  .aboutme > img {
+    display: unset;
+    max-width: 700px;
+    max-height: 636px;
+    width: 100%;
+  }
   .about-cont {
     display: block;
     width: 95%;
-    margin-top: 10vh;
+    min-height: 100vh;
+    margin-top: 13vh;
   }
   .about-cont > img {
     display: none;
   }
   .about-cont .desc {
     display: inline-block;
-    width: 40%;
-    padding: 70px;
+    width: 45%;
+    margin: 0 12px;
   }
   .about-cont .desc .about-hdr {
     display: block;
@@ -513,33 +669,14 @@ contacts
   }
   .about-cont .desc .about-par {
     margin-bottom: 25px;
-    line-height: 1.7;
+    line-height: 1.4;
     /*animation: RL 2s;
 				animation-delay: 0.3s;*/
   }
   .about-cont .desc .about-quote {
     /*animation: RL 2s;
 				animation-delay: 0.5s;*/
-  }
-  .animation {
-    width: 100%;
-    text-align: right;
-    max-width: 700px;
-    float: right;
-  }
-  .animation .basketball {
-    /*opacity: 0;*/
-    /*animation: LR 2s;*/
-    text-align: left;
-  }
-  .animation .traveling {
-    /*animation: LR 2s;
-			animation-delay: 0.3s;*/
-    margin-right: 10%;
-  }
-  .animation .art {
-    /*animation: LR 2s;
-			animation-delay: 0.5s*/
+    padding-bottom: 30px;
   }
   .edgar-anima {
     display: inline-block;
@@ -547,40 +684,6 @@ contacts
     height: 800px;
     vertical-align: top;
     padding-left: 41px;
-  }
-  .lakers {
-    /*opacity: 0;*/
-    /*animation: RL 1.5s;*/
-  }
-  .surfing {
-    /*opacity: 0;*/
-    margin-right: 126px;
-    /*animation: LR 1.5s;*/
-  }
-  .sky_diving {
-    /*opacity: 0;*/
-    margin-left: 67px;
-    /*animation: LR 1.5s;*/
-  }
-  .thailand {
-    /*opacity: 0;*/
-    margin-right: 15px;
-    /*animation: LR 1.5s;*/
-  }
-  .singapore {
-    /*opacity: 0;*/
-    margin-right: 84px;
-    /*animation: RL 1.5s;*/
-  }
-  .drawing {
-    /*opacity: 0;*/
-    margin-right: 23px;
-    /*animation: RL 1.5s;*/
-  }
-  .graphic_design {
-    /*opacity: 0;*/
-    margin-right: 70px;
-    /*animation: LR 1.5s;*/
   }
   /***************************
 	projects
@@ -597,9 +700,21 @@ contacts
     display: inline-block;
     margin: 27px;
     vertical-align: top;
+    /*opacity: unset;*/
   }
   .project-btn img {
     padding: 8px 21%;
+  }
+  .project-desc > h4 {
+    padding-top: 7px;
+  }
+  .project-desc > h4.hdr-logroom {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  .project-desc > h4.hdr-brew {
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
   /***************************
 	contacts
@@ -613,11 +728,11 @@ contacts
   }
   .contact-sect ul > a > li {
     padding: 30px;
-    padding-left: 33%;
+    padding-left: 22%;
     border: none;
   }
   .contact-sect ul > a > li img {
-    width: 35px;
+    width: 30px;
     margin-right: 28px;
   }
   .contact-sect ul > a:nth-child(3) > li {
@@ -637,18 +752,65 @@ contacts
 /***************************
 splash page
 ****************************/
+.header-item {
+  font-family: 'Anton', sans-serif;
+}
+.first-name {
+  font-size: 30.6vw;
+  line-height: 1;
+  color: #34a838;
+}
+.last-name {
+  font-size: 24vw;
+  line-height: 1;
+  color: #2f7a32;
+  /*margin-bottom: -13px;*/
+}
+.fullstack {
+  font-size: 18.12vw;
+  color: green;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+.developer {
+  font-size: 17.82vw;
+  color: #2f7a32;
+  line-height: 1.2;
+}
+.list-frontend {
+  font-size: 2.65vw;
+  color: #34a838;
+  line-height: 1;
+  word-spacing: 0.1vw;
+  margin-top: 5px;
+  font-family: 'EB Garamond', serif;
+}
+.list-backend {
+  font-size: 2.55vw;
+  color: #34a838;
+  word-spacing: 0.01vw;
+  font-family: 'EB Garamond', serif;
+}
 /***************************
 nav
 ****************************/
 .nav ul > li {
   color: rgba(0, 0, 0, 0.7);
+  font-family: 'EB Garamond', serif;
 }
 /***************************
 about me
 ****************************/
+.about-hdr {
+  font-family: 'Anton', sans-serif;
+}
 .about-cont {
   /*line-height: 1.8;*/
   text-align: center;
+}
+.about-par,
+.about-quote {
+  font-family: 'EB Garamond', serif;
 }
 .about-quote {
   font-style: italic;
@@ -658,18 +820,23 @@ projects
 ****************************/
 .project-hdr {
   text-align: center;
+  color: #3c9b40;
+  font-family: 'Anton', sans-serif;
 }
 .project-desc {
-  color: #ffffff;
+  color: #000000;
   font-size: 14.1px;
+  font-family: 'EB Garamond', serif;
 }
-.project-desc p > span {
+.project-desc h4 {
+  font-size: 22px;
+}
+.project-desc p {
   display: block;
   margin-top: 6px;
   word-wrap: break-word;
-  font-style: italic;
 }
-.project-desc p > span > strong {
+.project-desc p > strong {
   color: #50a96e;
 }
 /***************************
@@ -681,11 +848,39 @@ contacts
 .contact-sect ul > a > li {
   color: #3c9b40;
 }
+.contact-sect ul > a > li {
+  font-size: 14px;
+  font-family: 'EB Garamond', serif;
+}
+.contacts-hdr {
+  font-family: 'Anton', sans-serif;
+}
 /****iPad View*****/
 @media only screen and (min-width: 640px) {
   /***************************
 	splash page
 	****************************/
+  .header-item {
+    padding-bottom: 50px;
+  }
+  .first-name {
+    font-size: 197px;
+  }
+  .last-name {
+    font-size: 154px;
+  }
+  .fullstack {
+    font-size: 117px;
+  }
+  .developer {
+    font-size: 115px;
+  }
+  .list-frontend {
+    font-size: 17px;
+  }
+  .list-backend {
+    font-size: 16.5px;
+  }
   /***************************
 	nav
 	****************************/
@@ -697,6 +892,7 @@ contacts
 	****************************/
   .about-cont .desc {
     /*font-size: 24px;*/
+    line-height: 5vw;
   }
   /***************************
 	projects
@@ -705,7 +901,7 @@ contacts
     font-size: 4em;
   }
   .project-desc {
-    font-size: 19px;
+    font-size: 16px;
     line-height: 1.4;
   }
   /***************************
@@ -751,34 +947,6 @@ contacts
   .about-quote > strong {
     color: #3c9b40;
   }
-  .lakers {
-    font-size: 38px;
-    color: #37bf3c;
-  }
-  .surfing {
-    font-size: 46px;
-  }
-  .sky_diving {
-    font-size: 61px;
-    text-align: left;
-    color: #34a838;
-  }
-  .thailand {
-    font-size: 65px;
-    color: #34a838;
-  }
-  .singapore {
-    font-size: 35px;
-    text-align: center;
-    color: #37bf3c;
-  }
-  .drawing {
-    font-size: 38px;
-  }
-  .graphic_design {
-    font-size: 40px;
-    color: #34a838;
-  }
   /***************************
 	projects
 	****************************/
@@ -787,6 +955,14 @@ contacts
 	****************************/
   .contacts-hdr {
     font-size: 3em;
+  }
+  .contact-sect ul > a > li {
+    font-size: 21px;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .about-cont .desc .about-par {
+    line-height: 1.9;
   }
 }
 /****************************

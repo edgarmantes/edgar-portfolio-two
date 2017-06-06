@@ -9,13 +9,12 @@ splash page
 ****************************/
 
 .splash {
-	background-image: url(../images/beach1.png);
+	background-image: url(../images/beach1.jpg);
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	margin-left: auto;
     margin-right: auto;
-    width: 98%;
     content: '';
 }
 
@@ -25,11 +24,21 @@ splash page
 
 .splash-top, .splash-bottom {
 	background-color: white;
+	margin-top: -5px;
 }
 
 .white {
 	background-color: white;
 	z-index: -1;
+}
+
+.fullstack {
+	background: url(../images/beach1.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	-webkit-background-clip: text;
+
 }
 
 @keyframes fadeInBack {
@@ -64,10 +73,6 @@ nav
 ****************************/
 .nav {
 	background: white;
-    background: -webkit-linear-gradient(white, rgba(255,255,255,0)); 
-    background: -o-linear-gradient(white, rgba(255,255,255,0)); 
-    background: -moz-linear-gradient(white, rgba(255,255,255,0));
-    background: linear-gradient(white, rgba(255,255,255,0));
 }
 
 /***************************
@@ -84,12 +89,11 @@ projects
 ****************************/
 .projects {
 	background-color: lightgray;
-	background-image: url(../images/beach3.png);
+	background-image: url(../images/beach3.jpg);
 	background-size: cover;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 	background-repeat: no-repeat;
 	background-position: center ;
-	/*height: 100%;*/
 	width: 100%;
 	content: 'This ';
 }
@@ -99,7 +103,39 @@ projects
 }
 
 .project-desc {
-	background-color: rgb(0,0,0);
+	background-color: rgb(217, 217, 217);
+	background-image: url(../images/arrow-down.png);
+    background-repeat: repeat-x;
+
+
+}
+
+.project1 > .project-cont > .img {
+	background-image: url(../images/scrum3.PNG);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.project2 > .project-cont > .img {
+	background-image: url(../images/time4.PNG);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;	
+}
+
+.project3 > .project-cont > .img {
+	background-image: url(../images/LogRoom3.PNG);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;	
+}
+
+.project4 > .project-cont > .img {
+	background-image: url(../images/brew3.PNG);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
 }
 
 
@@ -135,7 +171,10 @@ about me
 /***************************
 projects
 ****************************/
-
+.project-desc {
+	background-image: url(../images/arrow-right.png);
+    background-repeat: repeat-y;
+}
 
 /***************************
 contacts
@@ -154,7 +193,13 @@ contacts
 	/***************************
 	nav
 	****************************/
-
+	.nav {
+		background: white;
+	    background: -webkit-linear-gradient(white, rgba(255,255,255,0), rgba(255,255,255,0)); 
+	    background: -o-linear-gradient(white, rgba(255,255,255,0), rgba(255,255,255,0)); 
+	    background: -moz-linear-gradient(white, rgba(255,255,255,0), rgba(255,255,255,0));
+	    background: linear-gradient(white, rgba(255,255,255,0), rgba(255,255,255,0));
+	}
 
 	/***************************
 	about me
@@ -162,10 +207,6 @@ contacts
 
 	.about {
 		background-color: rgb(217, 217, 217);
-		background-image: url(../images/edgar.png);
-		background-size: 30%;
-		background-repeat: no-repeat;
-		background-position: center center;
 	}
 
 

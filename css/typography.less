@@ -2,26 +2,84 @@
 @greenTwo: rgb(52, 168, 56);
 @greenThree: rgb(55, 191, 60);
 
+@Bowlby: 'Bowlby One', cursive;
+@Anton: 'Anton', sans-serif;
+
+@Garamond: 'EB Garamond', serif;
+
 /***************************
 splash page
 ****************************/
+.header-item {
+	font-family: @Anton;
+}
 
+.first-name {
+	font-size: 30.6vw;
+    line-height: 1;
+	color: @greenTwo;
+}
+
+.last-name {
+	font-size: 24vw;
+	line-height: 1;
+	color: @greenOne;
+	/*margin-bottom: -13px;*/
+}
+
+.fullstack {
+	font-size: 18.12vw;
+	color: green;
+	-webkit-text-fill-color: transparent;
+	line-height: 1;
+}
+
+.developer {
+	font-size: 17.82vw;
+	color: @greenOne;
+	line-height: 1.2;
+}
+
+.list-frontend {
+	font-size: 2.65vw;
+	color: @greenTwo;
+	line-height: 1;
+	word-spacing: 0.1vw;
+	margin-top: 5px;
+	font-family: @Garamond;
+}
+
+.list-backend {
+	font-size: 2.55vw;
+	color: @greenTwo;
+	word-spacing: 0.01vw;
+	font-family: @Garamond;
+}
 
 /***************************
 nav
 ****************************/
 .nav ul > li {
 	color: rgba(0,0,0,0.7);
+	font-family: @Garamond;
 }
 
 /***************************
 about me
 ****************************/
 
+.about-hdr {
+	font-family: @Anton;
+}
+
 .about-cont {
 	/*line-height: 1.8;*/
 	text-align: center;
 
+}
+
+.about-par, .about-quote {
+	font-family: @Garamond;
 }
 
 .about-quote {
@@ -34,23 +92,30 @@ about me
 /***************************
 projects
 ****************************/
+
 .project-hdr {
 	text-align: center;
+	color: rgb(60,155,64);
+	font-family: @Anton;
 }
 
 .project-desc {
 
-	color: rgb(255, 255, 255);
+	color: rgb(0,0,0);
 	font-size: 14.1px;	
+	font-family: @Garamond;
 
-	p > span {
+	h4 {
+		font-size: 22px;
+	}
+
+	p  {
 		display: block;
 		margin-top: 6px;
 		word-wrap: break-word;
-		font-style: italic;
 	}
 
-	p > span > strong {
+	p > strong {
 		color: rgb(80,169,110);
 	}
 }
@@ -67,6 +132,18 @@ contacts
 	color: rgb(60,155,64);
 }
 
+.contact-sect {
+
+	ul > a > li {
+	    font-size: 14px;
+	    font-family: @Garamond;
+	}
+}
+
+.contacts-hdr {
+	font-family: @Anton;
+}
+
 
 
 /****iPad View*****/
@@ -75,7 +152,34 @@ contacts
 	/***************************
 	splash page
 	****************************/
+	.header-item {
+		padding-bottom: 50px;
+	}
 
+	.first-name {
+		font-size: 197px;
+	}
+
+	.last-name {
+		font-size: 154px;
+
+	}
+
+	.fullstack {
+		font-size: 117px;
+	}
+
+	.developer {
+		font-size: 115px;
+	}
+
+	.list-frontend {
+		font-size: 17px;
+	}
+
+	.list-backend {
+		font-size: 16.5px; 
+	}
 
 	/***************************
 	nav
@@ -94,6 +198,7 @@ contacts
 
 		.desc {
 			/*font-size: 24px;*/
+			line-height: 5vw;
 		}
 	}
 
@@ -109,7 +214,7 @@ contacts
 	}
 
 	.project-desc {
-		font-size: 19px;
+		font-size: 16px;
     	line-height: 1.4;
 	}
 
@@ -177,40 +282,6 @@ contacts
 		}
 	}
 
-	.lakers {
-		font-size: 38px;
-		color: @greenThree;
-	}
-
-	.surfing {
-		font-size: 46px;
-	}
-
-	.sky_diving {
-		font-size: 61px;
-		text-align: left;
-		color: @greenTwo;
-	}
-
-	.thailand {
-		font-size: 65px;
-		color: @greenTwo;
-	}
-
-	.singapore {
-		font-size: 35px;
-		text-align: center;
-		color: @greenThree;
-	}
-
-	.drawing {
-		font-size: 38px;
-	}
-
-	.graphic_design {
-		font-size: 40px;
-		color: @greenTwo;
-	}
 
 
 	/***************************
@@ -224,4 +295,21 @@ contacts
 	.contacts-hdr {
 		font-size: 3em;
 	}
+
+	.contact-sect {
+
+		ul > a > li {
+		    font-size: 21px;
+		}
+	}
+}
+
+
+
+@media only screen and (min-width: 1450px) {
+
+	.about-cont .desc .about-par {
+	    line-height: 1.9;
+	}
+
 }

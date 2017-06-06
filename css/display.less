@@ -29,7 +29,7 @@ body, html, main {
 }
 
 .wrapper {
-	height: 92vh;
+	height: 100vh;
 }
 
 .wrappers {
@@ -41,6 +41,7 @@ body, html, main {
 	height: 100%;
 	width: 100%;
 	z-index: -5;
+	/*overflow: hidden;*/
 }
 
 .fixed {
@@ -111,26 +112,86 @@ body, html, main {
 /***************************
 splash page
 ****************************/
+
+.header-item {
+	display: block;
+	width: 90%;
+	max-width: 576px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10vh;
+}
+
+.first-name {
+	font-size: 8vw;
+	margin-top: 0;
+	/*margin-bottom: -18px;*/
+}
+
+
+
+.fullstack {
+	font-size: 4.85vw;
+	display:inline-block;
+	-webkit-transform:scale(1,2.5); /* Safari and Chrome */
+	-moz-transform:scale(1,2.5); /* Firefox */
+	-ms-transform:scale(1,2.5); /* IE 9 */
+	-o-transform:scale(1,2.5); /* Opera */
+	transform:scale(1,2.5); /* W3C */
+
+	margin: 12vw 0 6vw 0;
+}
+
+.developer {
+	display:inline-block;
+	-webkit-transform:scale(1,0.5); /*Safari and Chrome */
+	-moz-transform:scale(1,0.5); /* Firefox */
+	-ms-transform:scale(1,0.5); /* IE 9 */
+	-o-transform:scale(1,0.5); /* Opera */
+	transform:scale(1,0.5); /* W3C */
+	border-bottom: 10px solid @greenOne;
+	padding-bottom: 7px;
+	margin-bottom: -18px;
+}
+
+.list-frontend {
+	width: 101%;
+}
+
+.list-backend {
+	display: inline-block;
+	width: 101%;
+}
+
+.contain {
+	text-align: center;
+	min-height: 92vh;
+}
+
+
 .splash-img {
-	width: 99%;
-	/*height: 100vh;*/
+
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .splash {
-	width: 80%;
+	display: inline-block;
 	margin-bottom: -1px;
 	overflow: hidden;
+	margin-left: 10px;
+    margin-right: 10px;
+    max-width: 600px;
 }
 
 .splash-img > img {
-	width: 102%;
-	margin: 0 -1px;
+	max-width: 101%;
+	max-height: 75vh;
+	margin: 0 -2px;
 }
 
 .splash-top, .splash-bottom {
-    height: 24vh;
+    height: 26vh;
     border: none;
     width: 101%;
     margin: -5px -2px;
@@ -151,12 +212,19 @@ splash page
     z-index: -1;
 }
 
+.list-backend {
+	padding-bottom: 20px;
+}
+
 
 
 /***************************
 nav
 ****************************/
 .nav {
+/*	position: fixed;
+    top: 0;*/
+    display: none;
 	width: 100%;
 	height: 8vh;
 	z-index: 10;
@@ -194,7 +262,12 @@ nav
 /***************************
 about me
 ****************************/
-.about-hdr {
+
+.about {
+	min-height: 100vh;
+}
+
+.aboutme > img {
 	display: none;
 }
 
@@ -202,10 +275,15 @@ about me
 	width: 80%;
     margin: 25px auto 0;
     line-height: 1.5;
+
+    .desc {
+    	padding-bottom: 60px;
+    }
 }
 
 .about-cont > img {
 	width: 35%;
+	max-width: 150px;
     border-radius: 50%;
     padding-top: 10px;
 }
@@ -214,6 +292,13 @@ about me
 	display: none;
 }
 
+.about-hdr {
+	margin:	0.5em 0;
+}
+
+.desc > p {
+	font-size: 14px;
+}
 
 
 /***************************
@@ -230,16 +315,17 @@ projects
 	height: 25%;
     width: 90%;
     margin: 20px auto;
+    /*opacity: 1 !important;*/
 }
 
 .project-cont {
-	height: 235px;
+	height: 435px;
 	text-align: center;
 
 	.img {
-		display: inline-block;
-    	width: 38%;
-    	height: 100%;
+		display: block;
+    	width: 100%;
+    	height: 50%;
 	}
 }
 
@@ -251,12 +337,14 @@ projects
 
 .project-desc {
 	display: inline-block;
-	width: 60%;
-	height: 100%;
+	width: 100%;
+	height: 50%;
 	position: relative;
     vertical-align: top;
+    /*padding-top: 15px;*/
+
 	p {
-		padding: 1em;
+		padding: 0 1em;
 	}
 
 	p > span {
@@ -265,18 +353,23 @@ projects
 		word-wrap: break-word;
 		font-style: italic;
 	}
+
+	> h4 {
+    	padding-top: 25px;
+    }
 }
 
 .project-btn {
-	border-top: 1px solid white;
+	/*border-top: 1px solid white;*/
 	position: absolute;
-    bottom: -5px;
+    bottom: -6px;
     width: 100%;
 	a:nth-child(1) > img {
-		border-right: 1px solid white;	
+		border-right: 1px solid black;	
 	}
 	img {
-		padding: 5px 16%;
+		padding: 8px 16%;
+		height: 100%;
 	}
 
 }
@@ -303,6 +396,10 @@ projects
 /***************************
 contacts
 ****************************/
+.contact {
+	height: unset;
+}
+
 .contacts-hdr {
 	margin-bottom: 25px;
 }
@@ -331,6 +428,7 @@ contacts
 	ul > a > li > img {
 		vertical-align: middle;
 		margin-right: 15px;
+		width: 30px;
 	}
 }
 
@@ -354,13 +452,18 @@ contacts
 		height:17vh;
 	}
 
+	.fullstack {
+		margin: 78px 0 35px 0;
+	}
+
+
 	/***************************
 	nav
 	****************************/
 	.nav {
-
+		
 		ul {
-			padding: 2rem;
+			padding: 1rem;
 		}
 
 		ul > li {
@@ -375,6 +478,10 @@ contacts
 
 	.about-cont > img {
 		padding-top: 60px;
+	}
+
+	.desc > p {
+		font-size: 22px;
 	}
 
 
@@ -399,11 +506,19 @@ contacts
 	}
 
 	.project-cont {
+		height: 235px;
 
 		.img {
-			width: 39%;
-			margin-right: 2px;
+			display: inline-block;
+	    	width: 39%;
+	    	height: 100%;
 		}
+	}
+
+	.project-desc {
+		width: 61%;
+		height: 100%;
+
 	}
 
 	/***************************
@@ -433,6 +548,10 @@ contacts
 /****Desktop View*****/
 @media only screen and (min-width: 1000px) {
 
+	.wrapper {
+		height: 92vh;
+	}
+
 	/***************************
 	splash page
 	****************************/
@@ -442,7 +561,7 @@ contacts
 	nav
 	****************************/
 	.nav {
-
+		display: block;
 		ul > li {
 			padding: 0 60px;
 
@@ -455,12 +574,27 @@ contacts
 	/***************************
 	about me
 	****************************/
+	.aboutme {
+		display: inline-block;
+	    width: 45%;
+	    float: right;
+	    margin-right: 7%;
+	    margin-top: 6vh;
+	}
 
+	.aboutme > img {
+		display: unset;
+		max-width: 700px;
+	    max-height: 636px;
+	    width: 100%; 
+	}
 
 	.about-cont {
 		display: block;
 		width: 95%;
-		margin-top: 10vh;
+		min-height: 100vh;
+		margin-top: 13vh;
+
 		 
 		> img {
 			display: none;
@@ -468,8 +602,8 @@ contacts
 
 		.desc {
 			display: inline-block;
-			width: 40%;
-			padding: 70px;
+			width: 45%;
+			margin: 0 12px;
 
 			.about-hdr {
 				display: block;
@@ -481,7 +615,7 @@ contacts
 
 			.about-par {
 				margin-bottom: 25px;
-				line-height: 1.7;
+				line-height: 1.4;
 				/*animation: RL 2s;
 				animation-delay: 0.3s;*/
 				
@@ -491,36 +625,13 @@ contacts
 			.about-quote {
 				/*animation: RL 2s;
 				animation-delay: 0.5s;*/
-				
+				padding-bottom: 30px;
 			}
 		}
 	}
 
 
-	.animation {
-		width: 100%;
-    	text-align: right;
-    	max-width: 700px;
-    	float: right;
-    	
 
-		.basketball {
-			/*opacity: 0;*/
-			/*animation: LR 2s;*/
-			text-align: left;
-		}
-
-		.traveling {
-			/*animation: LR 2s;
-			animation-delay: 0.3s;*/
-			margin-right: 10%;
-		}    	
-
-		.art {
-			/*animation: LR 2s;
-			animation-delay: 0.5s*/
-		}
-	}
 
 	.edgar-anima {
 		display: inline-block;
@@ -530,46 +641,7 @@ contacts
     	padding-left: 41px;
 	}
 
-	.lakers {
-		/*opacity: 0;*/
-		/*animation: RL 1.5s;*/
-	}
 
-	.surfing {
-		/*opacity: 0;*/
-		margin-right: 126px;
-		/*animation: LR 1.5s;*/
-	}
-
-	.sky_diving {
-		/*opacity: 0;*/
-    	margin-left: 67px;
-    	/*animation: LR 1.5s;*/
-	}
-
-	.thailand {
-		/*opacity: 0;*/
-		margin-right: 15px;
-		/*animation: LR 1.5s;*/
-	}
-
-	.singapore {
-		/*opacity: 0;*/
-    	margin-right: 84px;
-    	/*animation: RL 1.5s;*/
-	}
-
-	.drawing {
-		/*opacity: 0;*/
-		margin-right: 23px;
-		/*animation: RL 1.5s;*/
-	}
-
-	.graphic_design {
-		/*opacity: 0;*/
-		margin-right: 70px;
-		/*animation: LR 1.5s;*/
-	}
 
 
 	/***************************
@@ -589,6 +661,7 @@ contacts
 		display: inline-block;
 		margin: 27px;
 		vertical-align: top;
+		/*opacity: unset;*/
 	}
 
 	.project-btn {
@@ -596,6 +669,23 @@ contacts
 			padding: 8px 21%;
 		}
 
+	}
+
+	.project-desc {
+
+		> h4 {
+	    	padding-top: 7px;
+	    }
+	}
+
+	.project-desc > h4.hdr-logroom {
+		padding-top: 15px;
+		padding-bottom: 10px;
+	}
+
+	.project-desc > h4.hdr-brew {
+		padding-top: 15px;
+		padding-bottom: 10px;
 	}
 
 
@@ -612,11 +702,12 @@ contacts
 
 		ul > a > li {
 		    padding: 30px;
-		    padding-left: 33%;
+		    padding-left: 22%;
 		    border: none;
+		    
 
 		    img {
-		    	width: 35px;
+		    	width: 30px;
 		    	margin-right: 28px;
 		    }
 		}
